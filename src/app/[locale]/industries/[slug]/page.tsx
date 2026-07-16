@@ -104,13 +104,24 @@ export default async function IndustryPage({
               <h2 className="heading-section text-navy-900 mb-8">Recommended Products</h2>
               <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {industryProducts.slice(0, 8).map((product) => (
-                  <Link key={product.id} href={`/products/item/${product.slug}`} className="card-premium p-5 group">
-                    <h3 className="font-semibold text-navy-900 group-hover:text-accent transition-colors">
-                      {getLocalized(product.name, locale)}
-                    </h3>
-                    <p className="text-navy-500 text-sm mt-2 line-clamp-2">
-                      {getLocalized(product.shortDescription, locale)}
-                    </p>
+                  <Link key={product.id} href={`/products/item/${product.slug}`} className="card-premium group block overflow-hidden">
+                    <div className="relative h-36 overflow-hidden bg-surface">
+                      <Image
+                        src={product.image}
+                        alt={getLocalized(product.name, locale)}
+                        fill
+                        className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                        sizes="25vw"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-semibold text-navy-900 transition-colors group-hover:text-accent">
+                        {getLocalized(product.name, locale)}
+                      </h3>
+                      <p className="mt-2 line-clamp-2 text-sm text-navy-500">
+                        {getLocalized(product.shortDescription, locale)}
+                      </p>
+                    </div>
                   </Link>
                 ))}
               </div>

@@ -1,4 +1,5 @@
 import type { Product } from "./types";
+import { buildCogelsaCatalogProducts } from "./cogelsaCatalog";
 
 const baseProducts: Omit<Product, "id" | "slug">[] = [
   {
@@ -15,7 +16,7 @@ const baseProducts: Omit<Product, "id" | "slug">[] = [
       ru: "Премиум гидравлическое масло для тяжёлых условий эксплуатации",
       en: "Premium hydraulic oil for heavy-duty operating conditions",
     },
-    image: "/images/products/hydraulic-hlp-46.jpg",
+    image: "/images/products/bochka-oil.jpg",
     gallery: [],
     applications: [
       { hy: "Гидравлические системы", ru: "Гидравлические системы", en: "Hydraulic systems" },
@@ -56,7 +57,7 @@ const baseProducts: Omit<Product, "id" | "slug">[] = [
       ru: "Промышленное редукторное масло ISO VG 220",
       en: "Industrial gear oil ISO VG 220",
     },
-    image: "/images/products/gear-oil.jpg",
+    image: "/images/products/bochka-oil.jpg",
     gallery: [],
     applications: [
       { hy: "Редукторы", ru: "Редукторы", en: "Gearboxes" },
@@ -94,7 +95,7 @@ const baseProducts: Omit<Product, "id" | "slug">[] = [
       ru: "Безопасное масло для контакта с пищевыми продуктами",
       en: "Safe oil for incidental food contact",
     },
-    image: "/images/products/food-grade.jpg",
+    image: "/images/products/bochka-oil.jpg",
     gallery: [],
     applications: [
       { hy: "Пищевое производство", ru: "Пищевое производство", en: "Food production" },
@@ -134,7 +135,7 @@ const baseProducts: Omit<Product, "id" | "slug">[] = [
       ru: "Универсальная смазка для подшипников качения",
       en: "Universal grease for rolling bearings",
     },
-    image: "/images/products/bearing-grease.jpg",
+    image: "/images/products/bochka-oil.jpg",
     gallery: [],
     applications: [
       { hy: "Подшипники", ru: "Подшипники", en: "Bearings" },
@@ -172,7 +173,7 @@ const baseProducts: Omit<Product, "id" | "slug">[] = [
       ru: "Длительный срок службы для винтовых компрессоров",
       en: "Extended life for screw compressors",
     },
-    image: "/images/products/compressor-oil.jpg",
+    image: "/images/products/bochka-oil.jpg",
     gallery: [],
     applications: [
       { hy: "Винтовые компрессоры", ru: "Винтовые компрессоры", en: "Screw compressors" },
@@ -237,7 +238,8 @@ function generateProducts(): Product[] {
       const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+$/, "");
       if (products.some((p) => p.slug === slug)) continue;
 
-      const image = `/images/products/catalog/${String(catalogNum++).padStart(3, "0")}.jpg`;
+      const image = "/images/products/bochka-oil.jpg";
+      catalogNum++;
 
       products.push({
         id: `prod-${id++}`,
@@ -283,6 +285,14 @@ function generateProducts(): Product[] {
         tags: [pt.sub, pt.type === "oil" ? `iso-vg-${v}` : `nlgi-${v}`],
       });
     }
+  }
+
+  const existingSlugs = new Set(products.map((p) => p.slug));
+  const catalogProducts = buildCogelsaCatalogProducts(id, catalogNum);
+  for (const cp of catalogProducts) {
+    if (existingSlugs.has(cp.slug)) continue;
+    existingSlugs.add(cp.slug);
+    products.push(cp);
   }
 
   return products;

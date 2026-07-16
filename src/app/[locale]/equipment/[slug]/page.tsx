@@ -81,8 +81,21 @@ export default async function EquipmentPage({
             <h2 className="heading-section text-navy-900 mb-8">Recommended Products</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {recommended.slice(0, 6).map((p) => (
-                <Link key={p.id} href={`/products/item/${p.slug}`} className="card-premium p-6 group">
-                  <h3 className="font-semibold text-navy-900 group-hover:text-accent">{getLocalized(p.name, locale)}</h3>
+                <Link key={p.id} href={`/products/item/${p.slug}`} className="card-premium group block overflow-hidden">
+                  <div className="relative h-36 overflow-hidden bg-surface">
+                    <Image
+                      src={p.image}
+                      alt={getLocalized(p.name, locale)}
+                      fill
+                      className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                      sizes="33vw"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-semibold text-navy-900 transition-colors group-hover:text-accent">
+                      {getLocalized(p.name, locale)}
+                    </h3>
+                  </div>
                 </Link>
               ))}
             </div>

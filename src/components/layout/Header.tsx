@@ -10,12 +10,11 @@ import {
   Search,
   ChevronDown,
   Phone,
-  Globe,
 } from "lucide-react";
 import { productCategories } from "@/data/categories";
 import { industries } from "@/data/industries";
 import { getLocalized } from "@/data/types";
-import { localeNames } from "@/i18n/config";
+import { localeFlags, localeNames, type Locale } from "@/i18n/config";
 import { companyInfo } from "@/data/company";
 
 export function Header() {
@@ -60,7 +59,7 @@ export function Header() {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-500",
           scrolled
-            ? "border-b border-navy-50/80 bg-white/92 py-3 shadow-soft backdrop-blur-xl"
+            ? "border-b border-navy-100 bg-white py-3 shadow-soft"
             : "bg-gradient-to-b from-navy-950/85 via-navy-950/45 to-transparent py-5"
         )}
       >
@@ -104,7 +103,7 @@ export function Header() {
                       "flex items-center gap-1 rounded-xl px-3 py-2 text-[13px] font-medium transition-colors",
                       light
                         ? "text-white/85 hover:bg-white/10 hover:text-white"
-                        : "text-navy-700 hover:bg-surface hover:text-accent"
+                        : "text-navy-900 hover:bg-surface hover:text-accent"
                     )}
                   >
                     {t(item.key)}
@@ -166,7 +165,7 @@ export function Header() {
                   "rounded-xl p-2.5 transition-colors",
                   light
                     ? "text-white hover:bg-white/10"
-                    : "text-navy-600 hover:bg-surface"
+                    : "text-navy-900 hover:bg-surface"
                 )}
               >
                 <Search className="h-5 w-5" />
@@ -180,14 +179,17 @@ export function Header() {
                     "flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-sm font-medium transition-colors",
                     light
                       ? "text-white hover:bg-white/10"
-                      : "text-navy-600 hover:bg-surface"
+                      : "text-navy-900 hover:bg-surface"
                   )}
                 >
-                  <Globe className="h-4 w-4" />
-                  <span className="hidden sm:inline uppercase">{locale}</span>
+                  <span className="text-base leading-none" aria-hidden>
+                    {localeFlags[locale as Locale]}
+                  </span>
+                  <span className="hidden sm:inline">{localeNames[locale as Locale]}</span>
+                  <ChevronDown className="h-3.5 w-3.5 opacity-70" />
                 </button>
                 {langOpen && (
-                  <div className="absolute right-0 top-full z-50 mt-2 min-w-[140px] overflow-hidden rounded-2xl border border-navy-50 bg-white shadow-lift">
+                  <div className="absolute right-0 top-full z-50 mt-2 min-w-[160px] overflow-hidden rounded-2xl border border-navy-50 bg-white shadow-lift">
                     {(["ru", "en"] as const).map((loc) => (
                       <Link
                         key={loc}
@@ -195,12 +197,15 @@ export function Header() {
                         locale={loc}
                         onClick={() => setLangOpen(false)}
                         className={cn(
-                          "block px-4 py-2.5 text-sm transition-colors hover:bg-surface",
+                          "flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors hover:bg-surface",
                           locale === loc
                             ? "font-semibold text-accent"
                             : "text-navy-700"
                         )}
                       >
+                        <span className="text-base leading-none" aria-hidden>
+                          {localeFlags[loc]}
+                        </span>
                         {localeNames[loc]}
                       </Link>
                     ))}
@@ -212,7 +217,7 @@ export function Header() {
                 href={`tel:${companyInfo.phone.replace(/\s/g, "")}`}
                 className={cn(
                   "hidden items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium lg:flex",
-                  light ? "text-white" : "text-navy-700"
+                  light ? "text-white" : "text-navy-900"
                 )}
               >
                 <Phone className="h-4 w-4 text-accent" />
@@ -229,7 +234,7 @@ export function Header() {
                   "rounded-xl p-2.5 xl:hidden",
                   light
                     ? "text-white hover:bg-white/10"
-                    : "text-navy-800 hover:bg-surface"
+                    : "text-navy-900 hover:bg-surface"
                 )}
                 onClick={() => setMobileOpen(true)}
                 aria-label="Menu"

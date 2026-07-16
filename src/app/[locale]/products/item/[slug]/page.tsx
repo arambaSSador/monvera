@@ -207,10 +207,21 @@ export default async function ProductDetailPage({
               <h2 className="heading-section text-navy-900 mb-8">{t("relatedProducts")}</h2>
               <div className="grid md:grid-cols-4 gap-6">
                 {related.map((p) => (
-                  <Link key={p.id} href={`/products/item/${p.slug}`} className="card-premium group p-4">
-                    <h3 className="font-semibold text-navy-900 group-hover:text-accent transition-colors">
-                      {getLocalized(p.name, locale)}
-                    </h3>
+                  <Link key={p.id} href={`/products/item/${p.slug}`} className="card-premium group block overflow-hidden">
+                    <div className="relative h-32 overflow-hidden bg-surface">
+                      <Image
+                        src={p.image}
+                        alt={getLocalized(p.name, locale)}
+                        fill
+                        className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                        sizes="25vw"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-navy-900 transition-colors group-hover:text-accent">
+                        {getLocalized(p.name, locale)}
+                      </h3>
+                    </div>
                   </Link>
                 ))}
               </div>

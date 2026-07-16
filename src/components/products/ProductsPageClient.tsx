@@ -132,37 +132,42 @@ export function ProductsPageClient() {
             </div>
           )}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid items-stretch md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.slice(0, 48).map((product, i) => (
-              <ScrollReveal key={product.id} delay={(i % 8) * 50}>
-                <div className="card-premium group">
-                  <Link href={`/products/item/${product.slug}`}>
-                    <div className="relative h-44 overflow-hidden">
+              <ScrollReveal key={product.id} delay={(i % 8) * 50} className="h-full">
+                <div className="card-premium group flex h-full flex-col overflow-hidden">
+                  <Link href={`/products/item/${product.slug}`} className="flex flex-1 flex-col">
+                    <div className="relative h-44 shrink-0 overflow-hidden">
                       <Image
                         src={product.image}
                         alt={getLocalized(product.name, locale)}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="25vw"
                       />
                       {product.foodGrade && (
-                        <span className="absolute top-3 left-3 badge-accent">NSF H1</span>
+                        <span className="badge-accent absolute left-3 top-3">NSF H1</span>
                       )}
                     </div>
-                    <div className="p-5">
-                      <h3 className="font-semibold text-navy-900 group-hover:text-accent transition-colors line-clamp-2">
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="line-clamp-2 min-h-[3.25rem] font-semibold text-navy-900 transition-colors group-hover:text-accent">
                         {getLocalized(product.name, locale)}
                       </h3>
-                      <p className="text-navy-500 text-sm mt-2 line-clamp-2">
+                      <p className="mt-2 line-clamp-2 min-h-[2.75rem] text-sm text-navy-500">
                         {getLocalized(product.shortDescription, locale)}
                       </p>
-                      {product.specifications.isoVg && (
-                        <span className="badge-navy mt-3">ISO VG {product.specifications.isoVg}</span>
-                      )}
+                      <div className="mt-3 min-h-7">
+                        {product.specifications.isoVg ? (
+                          <span className="badge-navy">ISO VG {product.specifications.isoVg}</span>
+                        ) : null}
+                      </div>
                     </div>
                   </Link>
-                  <div className="px-5 pb-5 flex gap-2">
-                    <Link href={`/quote?product=${product.slug}`} className="flex-1 btn-primary !py-2 !px-4 !text-xs text-center">
+                  <div className="mt-auto px-5 pb-5">
+                    <Link
+                      href={`/quote?product=${product.slug}`}
+                      className="btn-primary block w-full !px-4 !py-2 text-center !text-xs"
+                    >
                       {tCta("requestQuote")}
                     </Link>
                   </div>

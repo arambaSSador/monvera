@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -168,16 +169,27 @@ export default function LubricantFinderPage() {
                   <div className="space-y-4">
                     {recommendations.map((product, i) => (
                       <ScrollReveal key={product.id} delay={i * 100}>
-                        <div className="flex items-center justify-between p-5 rounded-2xl bg-surface hover:bg-accent/5 transition-colors">
-                          <div>
-                            <h3 className="font-semibold text-navy-900">
-                              {getLocalized(product.name, locale)}
-                            </h3>
-                            <p className="text-navy-500 text-sm mt-1">
-                              {getLocalized(product.shortDescription, locale)}
-                            </p>
+                        <div className="flex items-center justify-between gap-4 rounded-2xl bg-surface p-5 transition-colors hover:bg-accent/5">
+                          <div className="flex min-w-0 items-center gap-4">
+                            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-white">
+                              <Image
+                                src={product.image}
+                                alt={getLocalized(product.name, locale)}
+                                fill
+                                className="object-contain p-1"
+                                sizes="64px"
+                              />
+                            </div>
+                            <div className="min-w-0">
+                              <h3 className="font-semibold text-navy-900">
+                                {getLocalized(product.name, locale)}
+                              </h3>
+                              <p className="mt-1 text-sm text-navy-500">
+                                {getLocalized(product.shortDescription, locale)}
+                              </p>
+                            </div>
                           </div>
-                          <Link href={`/products/item/${product.slug}`} className="btn-primary !py-2 !px-4 !text-sm">
+                          <Link href={`/products/item/${product.slug}`} className="btn-primary shrink-0 !px-4 !py-2 !text-sm">
                             View <ChevronRight className="w-4 h-4" />
                           </Link>
                         </div>
