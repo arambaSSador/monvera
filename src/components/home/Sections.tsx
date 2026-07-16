@@ -253,7 +253,7 @@ export function CertificatesSection() {
       <div className="container-wide">
         <ScrollReveal>
           <div className="flex flex-col items-center text-center">
-            <p className="eyebrow">{t("certificates")}</p>
+            <p className="eyebrow !text-[13px]">{t("certificates")}</p>
             <h2 className="heading-section mt-3 text-navy-900">
               {t("certificates")}
             </h2>
@@ -263,7 +263,7 @@ export function CertificatesSection() {
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {certificates.map((c, i) => (
             <ScrollReveal key={c} delay={i * 50}>
-              <div className="rounded-full border border-navy-100 bg-white px-5 py-3 text-sm font-semibold text-navy-800 shadow-soft">
+              <div className="rounded-full border border-navy-100 bg-white px-5 py-3 text-[16px] font-semibold text-navy-800 shadow-soft">
                 {c}
               </div>
             </ScrollReveal>
@@ -273,7 +273,7 @@ export function CertificatesSection() {
         <div className="mt-8 text-center">
           <Link
             href="/certificates"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-accent"
+            className="inline-flex items-center gap-2 text-[16px] font-semibold text-accent"
           >
             {cta("viewAll")}
             <ArrowRight className="h-4 w-4" />
