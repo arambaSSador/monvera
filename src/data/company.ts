@@ -64,7 +64,9 @@ export const downloads = [
     id: "catalogue-2026",
     name: { hy: "Կատալոգ 2026", ru: "Каталог 2026", en: "Catalogue 2026" },
     type: "catalogue",
-    size: "12 MB",
+    size: "PDF",
+    // Put file in public/downloads/ and set path below to enable direct download
+    file: "" as string,
   },
   {
     id: "company-profile",
@@ -74,7 +76,8 @@ export const downloads = [
       en: "Company Profile",
     },
     type: "profile",
-    size: "3 MB",
+    size: "PDF",
+    file: "" as string,
   },
   {
     id: "food-grade-guide",
@@ -84,7 +87,8 @@ export const downloads = [
       en: "Food Grade Guide",
     },
     type: "guide",
-    size: "5 MB",
+    size: "PDF",
+    file: "" as string,
   },
   {
     id: "hydraulic-guide",
@@ -94,7 +98,8 @@ export const downloads = [
       en: "Hydraulic Guide",
     },
     type: "guide",
-    size: "4 MB",
+    size: "PDF",
+    file: "" as string,
   },
   {
     id: "iso-vg-table",
@@ -104,7 +109,8 @@ export const downloads = [
       en: "ISO VG Table",
     },
     type: "technical",
-    size: "1 MB",
+    size: "PDF",
+    file: "" as string,
   },
   {
     id: "nlgi-guide",
@@ -114,7 +120,8 @@ export const downloads = [
       en: "NLGI Guide",
     },
     type: "technical",
-    size: "1 MB",
+    size: "PDF",
+    file: "" as string,
   },
 ];
 
