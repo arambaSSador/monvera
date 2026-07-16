@@ -59,9 +59,9 @@ export function Header() {
   const light = !scrolled;
 
   const linkClass = cn(
-    "flex items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors",
+    "flex items-center gap-1 whitespace-nowrap rounded-lg px-3 py-2 text-[15px] font-medium leading-none tracking-[-0.01em] transition-colors",
     light
-      ? "text-white/85 hover:bg-white/10 hover:text-white"
+      ? "text-white/90 hover:bg-white/10 hover:text-white"
       : "text-navy-900 hover:bg-surface hover:text-accent"
   );
 
@@ -77,14 +77,14 @@ export function Header() {
       >
         <div className="container-wide px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 lg:gap-5">
-            <Link href="/" className="group flex shrink-0 items-center gap-2.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-accent shadow-glow transition-transform duration-300 group-hover:scale-105">
+            <Link href="/" className="group flex shrink-0 items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent shadow-glow transition-transform duration-300 group-hover:scale-105">
                 <span className="font-display text-lg font-bold text-white">M</span>
               </div>
               <div className="hidden sm:block">
                 <div
                   className={cn(
-                    "font-display text-base font-semibold leading-none tracking-tight",
+                    "font-display text-lg font-semibold leading-none tracking-tight",
                     light ? "text-white" : "text-navy-900"
                   )}
                 >
@@ -92,7 +92,7 @@ export function Header() {
                 </div>
                 <div
                   className={cn(
-                    "mt-1 whitespace-nowrap text-[10px] font-medium tracking-wide",
+                    "mt-1.5 whitespace-nowrap text-xs font-medium tracking-wide",
                     light ? "text-white/80" : "text-navy-500"
                   )}
                 >
@@ -269,7 +269,7 @@ export function Header() {
 
               <Link
                 href="/quote"
-                className="btn-primary hidden !px-4 !py-2 !text-xs whitespace-nowrap md:inline-flex"
+                className="btn-primary hidden !px-5 !py-2.5 !text-sm whitespace-nowrap md:inline-flex"
               >
                 {t("quote")}
               </Link>
