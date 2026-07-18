@@ -42,12 +42,12 @@ export function Header() {
     { key: "products", href: "/products", mega: "products" },
     { key: "industries", href: "/industries", mega: "industries" },
     { key: "services", href: "/services" },
-    { key: "technicalSupport", href: "/technical-support" },
     { key: "about", href: "/about" },
     { key: "contact", href: "/contact" },
   ];
 
   const moreNav = [
+    { key: "technicalSupport", href: "/technical-support" },
     { key: "blog", href: "/blog" },
     { key: "certificates", href: "/certificates" },
     { key: "downloads", href: "/downloads" },
@@ -59,7 +59,7 @@ export function Header() {
   const light = !scrolled;
 
   const linkClass = cn(
-    "flex items-center gap-1 whitespace-nowrap rounded-lg px-3 py-2 text-[15px] font-medium leading-none tracking-[-0.01em] transition-colors",
+    "inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-2 text-sm font-medium leading-none transition-colors",
     light
       ? "text-white/90 hover:bg-white/10 hover:text-white"
       : "text-navy-900 hover:bg-surface hover:text-accent"
@@ -76,15 +76,15 @@ export function Header() {
         )}
       >
         <div className="container-wide px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 lg:gap-5">
-            <Link href="/" className="group flex shrink-0 items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent shadow-glow transition-transform duration-300 group-hover:scale-105">
-                <span className="font-display text-lg font-bold text-white">M</span>
+          <div className="flex flex-nowrap items-center gap-2 lg:gap-4">
+            <Link href="/" className="group flex shrink-0 items-center gap-2.5">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-accent shadow-glow transition-transform duration-300 group-hover:scale-105">
+                <span className="font-display text-base font-bold text-white">M</span>
               </div>
-              <div className="hidden sm:block">
+              <div className="hidden min-w-0 sm:block">
                 <div
                   className={cn(
-                    "font-display text-lg font-semibold leading-none tracking-tight",
+                    "font-display text-base font-semibold leading-none tracking-tight whitespace-nowrap",
                     light ? "text-white" : "text-navy-900"
                   )}
                 >
@@ -92,7 +92,7 @@ export function Header() {
                 </div>
                 <div
                   className={cn(
-                    "mt-1.5 whitespace-nowrap text-xs font-medium tracking-wide",
+                    "mt-1 whitespace-nowrap text-[11px] font-medium tracking-wide",
                     light ? "text-white/80" : "text-navy-500"
                   )}
                 >
@@ -101,11 +101,11 @@ export function Header() {
               </div>
             </Link>
 
-            <nav className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 xl:flex">
+            <nav className="hidden flex-1 flex-nowrap items-center justify-center gap-0 xl:flex">
               {primaryNav.map((item) => (
                 <div
                   key={item.key}
-                  className="relative"
+                  className="relative shrink-0"
                   onMouseEnter={() => item.mega && setActiveMenu(item.mega)}
                   onMouseLeave={() => setActiveMenu(null)}
                 >
@@ -160,7 +160,7 @@ export function Header() {
               ))}
 
               <div
-                className="relative"
+                className="relative shrink-0"
                 onMouseEnter={() => setActiveMenu("more")}
                 onMouseLeave={() => setActiveMenu(null)}
               >
@@ -186,7 +186,7 @@ export function Header() {
               </div>
             </nav>
 
-            <div className="ml-auto flex shrink-0 items-center gap-1 sm:gap-1.5">
+            <div className="ml-auto flex shrink-0 flex-nowrap items-center gap-1">
               <button
                 type="button"
                 aria-label={t("search")}
@@ -201,12 +201,12 @@ export function Header() {
                 <Search className="h-5 w-5" />
               </button>
 
-              <div className="relative">
+              <div className="relative shrink-0">
                 <button
                   type="button"
                   onClick={() => setLangOpen((v) => !v)}
                   className={cn(
-                    "flex items-center gap-1.5 whitespace-nowrap rounded-xl px-2 py-2 text-sm font-medium transition-colors",
+                    "flex items-center gap-1 whitespace-nowrap rounded-xl px-2 py-2 text-sm font-medium transition-colors",
                     light
                       ? "text-white hover:bg-white/10"
                       : "text-navy-900 hover:bg-surface"
@@ -215,7 +215,6 @@ export function Header() {
                   <span className="text-base leading-none" aria-hidden>
                     {localeFlags[locale as Locale]}
                   </span>
-                  <span className="hidden 2xl:inline">{localeNames[locale as Locale]}</span>
                   <ChevronDown className="h-3.5 w-3.5 opacity-70" />
                 </button>
                 {langOpen && (
@@ -245,20 +244,9 @@ export function Header() {
 
               <a
                 href={`tel:${companyInfo.phone.replace(/\s/g, "")}`}
-                className={cn(
-                  "hidden items-center gap-2 whitespace-nowrap rounded-xl px-2.5 py-2 text-sm font-medium 2xl:flex",
-                  light ? "text-white" : "text-navy-900"
-                )}
-              >
-                <Phone className="h-4 w-4 shrink-0 text-accent" />
-                {companyInfo.phone}
-              </a>
-
-              <a
-                href={`tel:${companyInfo.phone.replace(/\s/g, "")}`}
                 aria-label={companyInfo.phone}
                 className={cn(
-                  "hidden items-center rounded-xl p-2 xl:flex 2xl:hidden",
+                  "hidden items-center rounded-xl p-2 xl:inline-flex",
                   light
                     ? "text-white hover:bg-white/10"
                     : "text-navy-900 hover:bg-surface"
@@ -269,7 +257,7 @@ export function Header() {
 
               <Link
                 href="/quote"
-                className="btn-primary hidden !px-5 !py-2.5 !text-sm whitespace-nowrap md:inline-flex"
+                className="btn-primary hidden !px-4 !py-2 !text-sm whitespace-nowrap shrink-0 md:inline-flex"
               >
                 {t("quote")}
               </Link>
