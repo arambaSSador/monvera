@@ -27,7 +27,7 @@ export const equipmentList: Equipment[] = [
       ru: "Редукторные масла для промышленных передач",
       en: "Gear oils for industrial transmissions",
     },
-    image: "/images/equipment/gearboxes.jpg",
+    image: "/images/equipment/podshipnik.jpg",
     icon: "Cog",
     recommendedProducts: ["cogelsa-gear-oil-ep-220"],
     maintenanceTips: [
