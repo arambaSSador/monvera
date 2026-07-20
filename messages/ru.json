@@ -214,6 +214,11 @@
     "food": "Пищевая отрасль",
     "case-studies": "Кейсы"
   },
+  "caseStudyPage": {
+    "problem": "Проблема",
+    "solution": "Решение",
+    "results": "Результаты"
+  },
   "downloadsPage": {
     "pdfCatalogues": "PDF-каталоги",
     "technicalGuides": "Технические руководства",

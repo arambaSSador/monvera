@@ -214,6 +214,11 @@
     "food": "Food Industry",
     "case-studies": "Case Studies"
   },
+  "caseStudyPage": {
+    "problem": "Problem",
+    "solution": "Solution",
+    "results": "Results"
+  },
   "downloadsPage": {
     "pdfCatalogues": "PDF Catalogues",
     "technicalGuides": "Technical Guides",

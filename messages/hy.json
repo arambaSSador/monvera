@@ -214,6 +214,11 @@
     "food": "Սննդի ոլորտ",
     "case-studies": "Դեպքեր"
   },
+  "caseStudyPage": {
+    "problem": "Խնդիր",
+    "solution": "Լուծում",
+    "results": "Արդյունքներ"
+  },
   "downloadsPage": {
     "pdfCatalogues": "PDF կատալոգներ",
     "technicalGuides": "Տեխնիկական ուղեցույցներ",
