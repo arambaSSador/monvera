@@ -43,7 +43,7 @@ export const equipmentList: Equipment[] = [
       ru: "Цепные масла и смазки для конвейерных цепей",
       en: "Chain oils and greases for conveyor chains",
     },
-    image: "/images/equipment/chains.jpg",
+    image: "/images/equipment/cepi.jpg",
     icon: "Link",
     recommendedProducts: [],
     maintenanceTips: [
@@ -59,7 +59,7 @@ export const equipmentList: Equipment[] = [
       ru: "Компрессорные масла для всех типов компрессоров",
       en: "Compressor oils for all compressor types",
     },
-    image: "/images/equipment/compressors.jpg",
+    image: "/images/equipment/compressor.jpg",
     icon: "Wind",
     recommendedProducts: ["cogelsa-compressor-oil-pao-68"],
     maintenanceTips: [
