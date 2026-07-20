@@ -368,7 +368,7 @@ export function CaseStudiesSection() {
             <ScrollReveal key={c.slug} delay={i * 70}>
               <Link href={`/case-studies/${c.slug}`} className="surface-card block p-6">
                 <p className="text-xs font-semibold uppercase tracking-wider text-accent">
-                  Case Study
+                  {t("caseStudy")}
                 </p>
                 <h3 className="mt-3 font-display text-xl font-semibold text-navy-900">
                   {getLocalized(c.title, locale)}

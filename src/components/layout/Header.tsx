@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Link, usePathname } from "@/i18n/routing";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import {
   Menu,
@@ -21,6 +21,7 @@ export function Header() {
   const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -220,13 +221,15 @@ export function Header() {
                 {langOpen && (
                   <div className="absolute right-0 top-full z-50 mt-2 min-w-[160px] overflow-hidden rounded-2xl border border-navy-50 bg-white shadow-lift">
                     {(["hy", "ru", "en"] as const).map((loc) => (
-                      <Link
+                      <button
                         key={loc}
-                        href={pathname}
-                        locale={loc}
-                        onClick={() => setLangOpen(false)}
+                        type="button"
+                        onClick={() => {
+                          setLangOpen(false);
+                          router.replace(pathname, { locale: loc });
+                        }}
                         className={cn(
-                          "flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors hover:bg-surface",
+                          "flex w-full items-center gap-2.5 px-4 py-2.5 text-left text-sm transition-colors hover:bg-surface",
                           locale === loc
                             ? "font-semibold text-accent"
                             : "text-navy-700"
@@ -236,7 +239,7 @@ export function Header() {
                           {localeFlags[loc]}
                         </span>
                         {localeNames[loc]}
-                      </Link>
+                      </button>
                     ))}
                   </div>
                 )}
