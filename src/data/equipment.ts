@@ -10,7 +10,7 @@ export const equipmentList: Equipment[] = [
       ru: "Смазочные материалы для подшипников качения и скольжения",
       en: "Lubricants for rolling and sliding bearings",
     },
-    image: "/images/equipment/bearings.jpg",
+    image: "/images/equipment/podshipnik.jpg",
     icon: "CircleDot",
     recommendedProducts: ["cogelsa-bearing-grease-lithium-ep-2"],
     maintenanceTips: [
