@@ -37,7 +37,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
         <div className="relative container-wide mx-auto px-4">
           <Breadcrumbs items={[{ label: "Products", href: "/products" }, { label: getLocalized(category.name, locale) }]} />
           <h1 className="heading-section text-white mt-4">{getLocalized(category.name, locale)}</h1>
-          <p className="text-white/85 text-lg mt-4 max-w-2xl">{getLocalized(category.description, locale)}</p>
+          <p className="mt-4 max-w-2xl whitespace-pre-line text-lg text-white/85">
+            {getLocalized(category.description, locale)}
+          </p>
         </div>
       </section>
       <section className="section-padding">

@@ -10,7 +10,7 @@ export const productCategories: ProductCategory[] = [
       en: "Industrial Oils",
     },
     description: {
-      hy: "Բարձրորակ արդյունաբերական յուղեր բոլոր տեսակի սարքավորումների համար",
+      hy: "Բարձրորակ արդյունաբերական յուղեր\nբոլոր տեսակի սարքավորումների համար",
       ru: "Высококачественные промышленные масла для всех типов оборудования",
       en: "High-quality industrial oils for all equipment types",
     },
