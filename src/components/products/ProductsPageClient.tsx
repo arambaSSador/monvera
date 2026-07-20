@@ -137,12 +137,12 @@ export function ProductsPageClient() {
               <ScrollReveal key={product.id} delay={(i % 8) * 50} className="h-full">
                 <div className="card-premium group flex h-full flex-col overflow-hidden">
                   <Link href={`/products/item/${product.slug}`} className="flex flex-1 flex-col">
-                    <div className="relative h-44 shrink-0 overflow-hidden">
+                    <div className="relative h-44 shrink-0 overflow-hidden bg-surface">
                       <Image
                         src={product.image}
                         alt={getLocalized(product.name, locale)}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                         sizes="25vw"
                       />
                       {product.foodGrade && (

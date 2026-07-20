@@ -77,12 +77,12 @@ export default async function ProductDetailPage({
         <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <div className="relative aspect-square rounded-3xl overflow-hidden shadow-premium">
+              <div className="relative aspect-square rounded-3xl overflow-hidden bg-surface shadow-premium">
                 <Image
                   src={product.image}
                   alt={getLocalized(product.name, locale)}
                   fill
-                  className="object-cover"
+                  className="object-contain p-6"
                   priority
                   sizes="50vw"
                 />
@@ -90,8 +90,8 @@ export default async function ProductDetailPage({
               {product.gallery.length > 0 && (
                 <div className="grid grid-cols-4 gap-3 mt-4">
                   {product.gallery.map((img, i) => (
-                    <div key={i} className="relative aspect-square rounded-xl overflow-hidden">
-                      <Image src={img} alt="" fill className="object-cover" sizes="12vw" />
+                    <div key={i} className="relative aspect-square rounded-xl overflow-hidden bg-surface">
+                      <Image src={img} alt="" fill className="object-contain p-2" sizes="12vw" />
                     </div>
                   ))}
                 </div>

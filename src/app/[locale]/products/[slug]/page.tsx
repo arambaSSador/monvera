@@ -52,8 +52,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {products.slice(0, 32).map((product) => (
               <Link key={product.id} href={`/products/item/${product.slug}`} className="card-premium group block">
-                <div className="relative h-40 overflow-hidden">
-                  <Image src={product.image} alt="" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="25vw" />
+                <div className="relative h-40 overflow-hidden bg-surface">
+                  <Image src={product.image} alt="" fill className="object-contain p-3 group-hover:scale-105 transition-transform duration-500" sizes="25vw" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-semibold text-navy-900 group-hover:text-accent transition-colors line-clamp-2">
