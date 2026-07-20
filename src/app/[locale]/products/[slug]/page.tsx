@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/routing";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { CategoryProductsClient } from "@/components/products/CategoryProductsClient";
 import { getCategoryBySlug, getAllCategorySlugs } from "@/data/categories";
 import { getProductsByCategory } from "@/data/products";
 import { getLocalized } from "@/data/types";
@@ -25,7 +24,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
   if (!category) notFound();
 
   const products = getProductsByCategory(slug);
-  const tCta = await getTranslations({ locale, namespace: "cta" });
 
   return (
     <>
@@ -44,30 +42,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
       </section>
       <section className="section-padding">
         <div className="container-wide mx-auto">
-          {category.subcategories.length > 0 && (
-            <div className="flex flex-wrap gap-3 mb-10">
-              {category.subcategories.map((sub) => (
-                <span key={sub.id} className="badge-navy">{getLocalized(sub.name, locale)}</span>
-              ))}
-            </div>
-          )}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {products.slice(0, 32).map((product) => (
-              <Link key={product.id} href={`/products/item/${product.slug}`} className="card-premium group block">
-                <div className="relative h-40 overflow-hidden bg-surface">
-                  <Image src={product.image} alt="" fill className="object-contain p-3 group-hover:scale-105 transition-transform duration-500" sizes="25vw" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-navy-900 group-hover:text-accent transition-colors line-clamp-2">
-                    {getLocalized(product.name, locale)}
-                  </h3>
-                  {product.specifications.isoVg && (
-                    <span className="badge-navy mt-2">ISO VG {product.specifications.isoVg}</span>
-                  )}
-                </div>
-              </Link>
-            ))}
-          </div>
+          <CategoryProductsClient
+            subcategories={category.subcategories}
+            products={products}
+          />
         </div>
       </section>
     </>

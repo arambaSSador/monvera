@@ -58,11 +58,17 @@
   }
 
   .heading-section {
-    @apply font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl leading-[1.1];
+    @apply font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl leading-[1.5];
+  }
+
+  /* Armenian fallback glyphs have tighter metrics — extra leading so wrapped lines don't touch. */
+  html[lang="hy"] .heading-section,
+  html[lang="hy"] .heading-display {
+    @apply leading-[1.5];
   }
 
   .eyebrow {
-    @apply text-[11px] font-semibold uppercase tracking-[0.22em] text-accent;
+    @apply text-sm font-semibold uppercase tracking-[0.22em] text-accent;
   }
 
   .btn-primary {

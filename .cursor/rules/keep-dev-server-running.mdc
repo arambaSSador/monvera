@@ -1,0 +1,35 @@
+---
+description: Keep next dev running; do not rebuild/restart after every edit
+alwaysApply: true
+---
+
+# Keep the local Next.js server running
+
+For local preview, use `next dev` (or `npm run dev`) on port 3000 and **leave it running**.
+
+## How to start the server
+
+When starting (or restarting after the server is actually down), use a durable detached process so Cursor agent shells do not reap it (exit 137):
+
+```
+nohup npm run dev -- -H 0.0.0.0 -p 3000 > /tmp/monvera-next-dev.log 2>&1 &
+```
+
+Run that via the Shell tool with unrestricted/`all` permissions (`required_permissions: ["all"]`). Logs go to `/tmp/monvera-next-dev.log`.
+
+## Do not do this after every edit
+
+- Run `npm run build`, kill port 3000, then `next start`
+- `kill -9` a healthy `next dev` process just to "refresh" after text/message/CSS/component changes
+- Never kill a healthy server on :3000
+
+## Prefer HMR
+
+Message/JSON/CSS/component edits are picked up by Hot Module Replacement. Trust HMR. Never use build + `next start` for routine edits.
+
+## When rebuild/restart is OK
+
+Only rebuild or restart the server if:
+
+- The user explicitly asks, or
+- The server is actually down / not responding
