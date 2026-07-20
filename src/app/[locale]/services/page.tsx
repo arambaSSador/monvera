@@ -11,8 +11,12 @@ import { CTASection } from "@/components/home/HeroSection";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   return generateSEO({
-    title: { en: "Services", ru: "Услуги", hy: "Tsarayutyunner" },
-    description: { en: "Technical consulting, oil analysis, lubrication audit", ru: "Техническое консультирование, анализ масла", hy: "Tekhnakan tsarayutyunner" },
+    title: { en: "Services", ru: "Услуги", hy: "Ծառայություններ" },
+    description: {
+      en: "Technical consulting, oil analysis, lubrication audit",
+      ru: "Техническое консультирование, анализ масла",
+      hy: "Տեխնիկական խորհրդատվություն, յուղի վերլուծություն, քսման աուդիտ",
+    },
     locale,
     path: "/services",
   });

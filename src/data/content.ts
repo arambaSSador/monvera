@@ -371,68 +371,68 @@ export const services: Service[] = [
   {
     id: "consulting",
     slug: "technical-consulting",
-    name: { hy: "Техническое консультирование", ru: "Техническое консультирование", en: "Technical Consulting" },
+    name: { hy: "Տեխնիկական խորհրդատվություն", ru: "Техническое консультирование", en: "Technical Consulting" },
     description: {
-      hy: "Экспертная помощь в выборе оптимальных смазочных материалов",
+      hy: "Օպտիմալ քսանյութերի ընտրության մասին փորձագիտական օգնություն",
       ru: "Экспертная помощь в выборе оптимальных смазочных материалов",
       en: "Expert assistance in selecting optimal lubricants",
     },
     icon: "MessageSquare",
     features: [
-      { hy: "Анализ оборудования", ru: "Анализ оборудования", en: "Equipment analysis" },
-      { hy: "Рекомендации продуктов", ru: "Рекомендации продуктов", en: "Product recommendations" },
+      { hy: "Սարքավորումների վերլուծություն", ru: "Анализ оборудования", en: "Equipment analysis" },
+      { hy: "Ապրանքների խորհուրդներ", ru: "Рекомендации продуктов", en: "Product recommendations" },
     ],
   },
   {
     id: "audit",
     slug: "lubrication-audit",
-    name: { hy: "Аудит смазки", ru: "Аудит смазки", en: "Lubrication Audit" },
+    name: { hy: "Քսման աուդիտ", ru: "Аудит смазки", en: "Lubrication Audit" },
     description: {
-      hy: "Комплексный аудит систем смазки на вашем предприятии",
+      hy: "Ձեր ձեռնարկության քսման համակարգերի համակիրման աուդիտ",
       ru: "Комплексный аудит систем смазки на вашем предприятии",
       en: "Comprehensive lubrication system audit at your facility",
     },
     icon: "ClipboardCheck",
     features: [
-      { hy: "Обход оборудования", ru: "Обход оборудования", en: "Equipment walkthrough" },
-      { hy: "Отчёт с рекомендациями", ru: "Отчёт с рекомендациями", en: "Report with recommendations" },
+      { hy: "Սարքավորումների շրջագայություն", ru: "Обход оборудования", en: "Equipment walkthrough" },
+      { hy: "Հաշվետվություն խորհուրդներով", ru: "Отчёт с рекомендациями", en: "Report with recommendations" },
     ],
   },
   {
     id: "analysis",
     slug: "oil-analysis",
-    name: { hy: "Анализ масла", ru: "Анализ масла", en: "Oil Analysis" },
+    name: { hy: "Յուղի վերլուծություն", ru: "Анализ масла", en: "Oil Analysis" },
     description: {
-      hy: "Лабораторный анализ состояния смазочных материалов",
+      hy: "Քսանյութերի վիճակի լաբորատոր վերլուծություն",
       ru: "Лабораторный анализ состояния смазочных материалов",
       en: "Laboratory analysis of lubricant condition",
     },
     icon: "FlaskConical",
     features: [
-      { hy: "Спектральный анализ", ru: "Спектральный анализ", en: "Spectral analysis" },
-      { hy: "Прогнозирование отказов", ru: "Прогнозирование отказов", en: "Failure prediction" },
+      { hy: "Սպեկտրային վերլուծություն", ru: "Спектральный анализ", en: "Spectral analysis" },
+      { hy: "Խաւտրանցումների կանխատեսում", ru: "Прогнозирование отказов", en: "Failure prediction" },
     ],
   },
   {
     id: "mapping",
     slug: "lubrication-mapping",
-    name: { hy: "Картирование смазки", ru: "Картирование смазки", en: "Lubrication Mapping" },
+    name: { hy: "Քսման քարտեզագրում", ru: "Картирование смазки", en: "Lubrication Mapping" },
     description: {
-      hy: "Создание карты смазки всего оборудования",
+      hy: "Բոլոր սարքավորումների քսման քարտեզի ստեղծում",
       ru: "Создание карты смазки всего оборудования",
       en: "Creating lubrication map for all equipment",
     },
     icon: "Map",
     features: [
-      { hy: "QR-коды на оборудовании", ru: "QR-коды на оборудовании", en: "QR codes on equipment" },
+      { hy: "QR կոդեր սարքավորումների վրա", ru: "QR-коды на оборудовании", en: "QR codes on equipment" },
     ],
   },
   {
     id: "inspection",
     slug: "equipment-inspection",
-    name: { hy: "Инспекция оборудования", ru: "Инспекция оборудования", en: "Equipment Inspection" },
+    name: { hy: "Սարքավորումների ստուգում", ru: "Инспекция оборудования", en: "Equipment Inspection" },
     description: {
-      hy: "Профессиональная инспекция промышленного оборудования",
+      hy: "Արդյունաբերական սարքավորումների մասնագիտական ստուգում",
       ru: "Профессиональная инспекция промышленного оборудования",
       en: "Professional industrial equipment inspection",
     },
@@ -442,9 +442,9 @@ export const services: Service[] = [
   {
     id: "training",
     slug: "training",
-    name: { hy: "Обучение", ru: "Обучение", en: "Training" },
+    name: { hy: "Ուսուցում", ru: "Обучение", en: "Training" },
     description: {
-      hy: "Обучение персонала правилам смазки и обслуживания",
+      hy: "Անձնակազմի ուսուցում քսման և սպասարկման կանոնների մասին",
       ru: "Обучение персонала правилам смазки и обслуживания",
       en: "Staff training on lubrication and maintenance",
     },
@@ -454,9 +454,9 @@ export const services: Service[] = [
   {
     id: "maintenance",
     slug: "industrial-maintenance",
-    name: { hy: "Промышленное обслуживание", ru: "Промышленное обслуживание", en: "Industrial Maintenance" },
+    name: { hy: "Արդյունաբերական սպասարկում", ru: "Промышленное обслуживание", en: "Industrial Maintenance" },
     description: {
-      hy: "Комплексное обслуживание промышленного оборудования",
+      hy: "Արդյունաբերական սարքավորումների համակիրման սպասարկում",
       ru: "Комплексное обслуживание промышленного оборудования",
       en: "Comprehensive industrial equipment maintenance",
     },
@@ -466,9 +466,9 @@ export const services: Service[] = [
   {
     id: "custom",
     slug: "custom-solutions",
-    name: { hy: "Индивидуальные решения", ru: "Индивидуальные решения", en: "Custom Lubrication Solutions" },
+    name: { hy: "Անհատական լուծումներ", ru: "Индивидуальные решения", en: "Custom Lubrication Solutions" },
     description: {
-      hy: "Разработка индивидуальных смазочных решений",
+      hy: "Անհատական քսման լուծումների մշակում",
       ru: "Разработка индивидуальных смазочных решений",
       en: "Development of custom lubrication solutions",
     },
