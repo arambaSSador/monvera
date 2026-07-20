@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { recommendProducts } from "@/data/products";
 import { getLocalized } from "@/data/types";
 import { Link } from "@/i18n/routing";
+import { aiResponsesHy } from "@/data/aiResponsesHy";
 
 interface Message {
   role: "user" | "assistant";
@@ -29,17 +30,21 @@ export function AIChatAssistant() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  const pick = (hy: string, ru: string, en: string) =>
+    locale === "hy" ? hy : locale === "ru" ? ru : en;
+
   const generateResponse = (query: string): Message => {
     const q = query.toLowerCase();
 
-    if (q.includes("food") || q.includes("h1") || q.includes("пищ")) {
+    if (q.includes("food") || q.includes("h1") || q.includes("пищ") || q.includes("սն")) {
       const products = recommendProducts({ foodContact: true });
       return {
         role: "assistant",
-        content:
-          locale === "ru"
-            ? "Для пищевой промышленности рекомендую сертифицированные NSF H1 продукты COGELSA FOODLUBE — безопасны при случайном контакте с продуктами и соответствуют HACCP."
-            : "For food industry applications, I recommend NSF H1 certified COGELSA FOODLUBE products. Safe for incidental food contact and HACCP-ready.",
+        content: pick(
+          aiResponsesHy.food,
+          "Для пищевой промышленности рекомендую сертифицированные NSF H1 продукты COGELSA FOODLUBE — безопасны при случайном контакте с продуктами и соответствуют HACCP.",
+          "For food industry applications, I recommend NSF H1 certified COGELSA FOODLUBE products. Safe for incidental food contact and HACCP-ready."
+        ),
         products: products.slice(0, 3).map((p) => ({
           slug: p.slug,
           name: getLocalized(p.name, locale),
@@ -47,14 +52,15 @@ export function AIChatAssistant() {
       };
     }
 
-    if (q.includes("hydraulic") || q.includes("гидр")) {
+    if (q.includes("hydraulic") || q.includes("гидр") || q.includes("հիդ")) {
       const products = recommendProducts({ equipment: "hydraulic-systems" });
       return {
         role: "assistant",
-        content:
-          locale === "ru"
-            ? "Для гидравлики рекомендую серию COGELSA HYDRAULIC HLP. ISO VG 46 — наиболее частая вязкость. Для интервалов замены полезен анализ масла."
-            : "For hydraulic systems, COGELSA HYDRAULIC HLP series oils are recommended. ISO VG 46 is the most common grade. Consider oil analysis for change intervals.",
+        content: pick(
+          aiResponsesHy.hydraulic,
+          "Для гидравлики рекомендую серию COGELSA HYDRAULIC HLP. ISO VG 46 — наиболее частая вязкость. Для интервалов замены полезен анализ масла.",
+          "For hydraulic systems, COGELSA HYDRAULIC HLP series oils are recommended. ISO VG 46 is the most common grade. Consider oil analysis for change intervals."
+        ),
         products: products.slice(0, 3).map((p) => ({
           slug: p.slug,
           name: getLocalized(p.name, locale),
@@ -66,15 +72,18 @@ export function AIChatAssistant() {
       q.includes("bearing") ||
       q.includes("подшип") ||
       q.includes("grease") ||
-      q.includes("смаз")
+      q.includes("смаз") ||
+      q.includes("aranc") ||
+      q.includes("առան")
     ) {
       const products = recommendProducts({ equipment: "bearings" });
       return {
         role: "assistant",
-        content:
-          locale === "ru"
-            ? "Для подшипников рекомендую COGELSA BEARING GREASE Lithium EP 2 (NLGI 2). Заполняйте 1/3–1/2 полости подшипника — не пересмазывайте."
-            : "For bearings, I recommend COGELSA BEARING GREASE Lithium EP 2 (NLGI 2). Fill 1/3 to 1/2 of the cavity — avoid over-greasing.",
+        content: pick(
+          aiResponsesHy.bearing,
+          "Для подшипников рекомендую COGELSA BEARING GREASE Lithium EP 2 (NLGI 2). Заполняйте 1/3–1/2 полости подшипника — не пересмазывайте.",
+          "For bearings, I recommend COGELSA BEARING GREASE Lithium EP 2 (NLGI 2). Fill 1/3 to 1/2 of the cavity — avoid over-greasing."
+        ),
         products: products.slice(0, 3).map((p) => ({
           slug: p.slug,
           name: getLocalized(p.name, locale),
@@ -82,14 +91,15 @@ export function AIChatAssistant() {
       };
     }
 
-    if (q.includes("mining") || q.includes("горн") || q.includes("шахт")) {
+    if (q.includes("mining") || q.includes("горн") || q.includes("шахт") || q.includes("հան")) {
       const products = recommendProducts({ industry: "mining" });
       return {
         role: "assistant",
-        content:
-          locale === "ru"
-            ? "Горнодобыча требует EP-смазок из-за высоких нагрузок, пыли и влаги. COGELSA предлагает решения для конвейеров, дробилок и тяжёлой техники."
-            : "Mining needs EP lubricants for heavy loads, dust, and moisture. COGELSA covers conveyors, crushers, and heavy machinery.",
+        content: pick(
+          aiResponsesHy.mining,
+          "Горнодобыча требует EP-смазок из-за высоких нагрузок, пыли и влаги. COGELSA предлагает решения для конвейеров, дробилок и тяжёлой техники.",
+          "Mining needs EP lubricants for heavy loads, dust, and moisture. COGELSA covers conveyors, crushers, and heavy machinery."
+        ),
         products: products.slice(0, 3).map((p) => ({
           slug: p.slug,
           name: getLocalized(p.name, locale),
@@ -99,10 +109,11 @@ export function AIChatAssistant() {
 
     return {
       role: "assistant",
-      content:
-        locale === "ru"
-          ? "Помогу с подбором смазки, спецификациями и рекомендациями по применению. Укажите отрасль, тип оборудования или перейдите в Lubricant Finder."
-          : "I can help with lubricant selection, specs, and application guidance. Share your industry or equipment — or use the Lubricant Finder.",
+      content: pick(
+        aiResponsesHy.default,
+        "Помогу с подбором смазки, спецификациями и рекомендациями по применению. Укажите отрасль, тип оборудования или перейдите в Lubricant Finder.",
+        "I can help with lubricant selection, specs, and application guidance. Share your industry or equipment — or use the Lubricant Finder."
+      ),
     };
   };
 
@@ -197,7 +208,7 @@ export function AIChatAssistant() {
               <div className="flex justify-start">
                 <div className="rounded-2xl bg-surface px-4 py-3 text-sm text-navy-500">
                   <span className="animate-pulse">
-                    {locale === "ru" ? "Анализирую..." : "Analyzing..."}
+                    {pick(aiResponsesHy.loading, "Анализирую...", "Analyzing...")}
                   </span>
                 </div>
               </div>

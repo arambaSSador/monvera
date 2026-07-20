@@ -166,7 +166,7 @@
     "expertise": "Technical Expertise",
     "delivery": "Fast Delivery Across Armenia",
     "stock": "Large Local Stock",
-    "consultation": "Professional Consultation",
+    "consultation": "Consultation",
     "experience": "Industrial Experience",
     "partnership": "Long-Term Partnership",
     "quality": "Premium Quality",
@@ -204,5 +204,17 @@
     "noResults": "No results found",
     "readMore": "Read More",
     "share": "Share"
+  },
+  "downloadsPage": {
+    "pdfCatalogues": "PDF Catalogues",
+    "technicalGuides": "Technical Guides",
+    "technicalData": "Technical Data",
+    "companyProfile": "Company Profile",
+    "hint": "PDFs are sent on request via WhatsApp. Click a card to open a chat with a ready message.",
+    "requestWhatsApp": "Request via WhatsApp",
+    "needOther": "Need another document?",
+    "needOtherBody": "Email {email} or WhatsApp — we will send TDS, MSDS or catalogues.",
+    "waMessage": "Hello! I need a COGELSA catalogue / document.",
+    "docMessage": "Hello! Please send me this document: {name}."
   }
 }

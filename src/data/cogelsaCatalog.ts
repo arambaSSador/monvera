@@ -1,4 +1,11 @@
 import type { Product } from "./types";
+import {
+  catalogAdvantagesHy,
+  catalogApplicationHy,
+  catalogBaseOilHy,
+  catalogDescHy,
+  catalogShortHy,
+} from "./armenianCatalog";
 
 export type CatalogEntry = {
   name: string;
@@ -693,25 +700,25 @@ function entryToProduct(
     category: entry.category,
     subcategory: entry.subcategory,
     description: {
-      hy: entry.descRu,
+      hy: catalogDescHy(entry, productName),
       ru: entry.descRu,
       en: entry.descEn,
     },
     shortDescription: {
-      hy: entry.shortRu ?? entry.descRu.split("—")[0].trim(),
+      hy: catalogShortHy(entry, productName),
       ru: entry.shortRu ?? entry.descRu.split("—")[0].trim(),
       en: entry.shortEn ?? entry.descEn.split("—")[0].trim(),
     },
     image: catalogImage(catalogNum),
     gallery: [],
     applications: appsRu.map((ru, i) => ({
-      hy: ru,
+      hy: catalogApplicationHy,
       ru,
       en: appsEn[i] ?? appsEn[0],
     })),
     advantages: [
-      { hy: "Европейское качество COGELSA", ru: "Европейское качество COGELSA", en: "COGELSA European quality" },
-      { hy: "Длительный срок службы", ru: "Длительный срок службы", en: "Extended service life" },
+      { hy: catalogAdvantagesHy.quality, ru: "Европейское качество COGELSA", en: "COGELSA European quality" },
+      { hy: catalogAdvantagesHy.life, ru: "Длительный срок службы", en: "Extended service life" },
     ],
     industries,
     equipment: entry.equipment ?? ["bearings", "gearboxes", "hydraulic-systems"],
@@ -719,7 +726,7 @@ function entryToProduct(
       ...(variant.isoVg ? { isoVg: variant.isoVg } : {}),
       ...(variant.nlgi ? { nlgi: variant.nlgi } : {}),
       baseOil: {
-        hy: entry.baseOilRu ?? (entry.synthetic ? "Синтетическое" : DEFAULT_BASE_RU),
+        hy: catalogBaseOilHy(entry),
         ru: entry.baseOilRu ?? (entry.synthetic ? "Синтетическое" : DEFAULT_BASE_RU),
         en: entry.baseOilEn ?? (entry.synthetic ? "Synthetic" : DEFAULT_BASE_EN),
       },

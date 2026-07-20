@@ -219,7 +219,7 @@ export function Header() {
                 </button>
                 {langOpen && (
                   <div className="absolute right-0 top-full z-50 mt-2 min-w-[160px] overflow-hidden rounded-2xl border border-navy-50 bg-white shadow-lift">
-                    {(["ru", "en"] as const).map((loc) => (
+                    {(["hy", "ru", "en"] as const).map((loc) => (
                       <Link
                         key={loc}
                         href={pathname}

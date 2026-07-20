@@ -18,19 +18,19 @@ export async function generateMetadata({
   const { locale } = await params;
   return generateSEO({
     title: {
-      hy: "MONVERA LLC — Official COGELSA Distributor",
+      hy: "MONVERA LLC — COGELSA-ի պաշտոնական դիստրիբյուտորը",
       ru: "MONVERA LLC — Официальный дистрибьютор COGELSA",
       en: "MONVERA LLC — Official COGELSA Distributor",
     },
     description: {
-      hy: "Industrial lubrication solutions in Armenia. Official COGELSA distributor. 500+ products, technical support.",
+      hy: "MONVERA LLC-ն COGELSA արդյունաբերական քսանյութերի պաշտոնական դիստրիբյուտորն է Հայաստանում։ 500+ ապրանք, տեխնիկական աջակցություն։",
       ru: "Промышленные смазочные решения в Армении. Официальный дистрибьютор COGELSA. 500+ продуктов, техническая поддержка.",
       en: "Industrial lubrication solutions in Armenia. Official COGELSA distributor. 500+ products, technical support.",
     },
     locale,
     path: "",
     keywords: {
-      hy: "industrial lubricants Armenia, COGELSA, hydraulic oil, food grade",
+      hy: "արդյունաբերական քսանյութ, COGELSA, հիդրավլիկ յուղ, Food Grade, Հայաստան",
       ru: "промышленные смазки Армения, COGELSA, гидравлическое масло",
       en: "industrial lubricants Armenia, COGELSA, hydraulic oil, food grade",
     },

@@ -4,9 +4,9 @@ export const equipmentList: Equipment[] = [
   {
     id: "bearings",
     slug: "bearings",
-    name: { hy: "Подшипники", ru: "Подшипники", en: "Bearings" },
+    name: { hy: "Առանցքակալներ", ru: "Подшипники", en: "Bearings" },
     description: {
-      hy: "Смазочные материалы для подшипников качения и скольжения",
+      hy: "Քսուքներ գլանվածքային և սահքի առանցքակալների համար",
       ru: "Смазочные материалы для подшипников качения и скольжения",
       en: "Lubricants for rolling and sliding bearings",
     },
@@ -14,16 +14,16 @@ export const equipmentList: Equipment[] = [
     icon: "CircleDot",
     recommendedProducts: ["cogelsa-bearing-grease-lithium-ep-2"],
     maintenanceTips: [
-      { hy: "Регулярная проверка уровня смазки", ru: "Регулярная проверка уровня смазки", en: "Regular grease level check" },
-      { hy: "Избегайте пересмазки", ru: "Избегайте пересмазки", en: "Avoid over-greasing" },
+      { hy: "Քսուքի մակարդակի կանոնավոր ստուգում", ru: "Регулярная проверка уровня смазки", en: "Regular grease level check" },
+      { hy: "Խուսափեք ավելցուկային քսումից", ru: "Избегайте пересмазки", en: "Avoid over-greasing" },
     ],
   },
   {
     id: "gearboxes",
     slug: "gearboxes",
-    name: { hy: "Редукторы", ru: "Редукторы", en: "Gearboxes" },
+    name: { hy: "Ռեդուկտորներ", ru: "Редукторы", en: "Gearboxes" },
     description: {
-      hy: "Редукторные масла для промышленных передач",
+      hy: "Ռեդուկտորային յուղեր արդյունաբերական փոխանցումների համար",
       ru: "Редукторные масла для промышленных передач",
       en: "Gear oils for industrial transmissions",
     },
@@ -31,15 +31,15 @@ export const equipmentList: Equipment[] = [
     icon: "Cog",
     recommendedProducts: ["cogelsa-gear-oil-ep-220"],
     maintenanceTips: [
-      { hy: "Контроль вязкости масла", ru: "Контроль вязкости масла", en: "Monitor oil viscosity" },
+      { hy: "Յուղի մածուցիկության հսկողություն", ru: "Контроль вязкости масла", en: "Monitor oil viscosity" },
     ],
   },
   {
     id: "chains",
     slug: "chains",
-    name: { hy: "Цепи", ru: "Цепи", en: "Chains" },
+    name: { hy: "Շղթաներ", ru: "Цепи", en: "Chains" },
     description: {
-      hy: "Цепные масла и смазки для конвейерных цепей",
+      hy: "Շղթայական յուղեր և քսուքներ կոնվեյերային շղթաների համար",
       ru: "Цепные масла и смазки для конвейерных цепей",
       en: "Chain oils and greases for conveyor chains",
     },
@@ -47,15 +47,15 @@ export const equipmentList: Equipment[] = [
     icon: "Link",
     recommendedProducts: [],
     maintenanceTips: [
-      { hy: "Регулярная смазка цепей", ru: "Регулярная смазка цепей", en: "Regular chain lubrication" },
+      { hy: "Շղթաների կանոնավոր քսում", ru: "Регулярная смазка цепей", en: "Regular chain lubrication" },
     ],
   },
   {
     id: "compressors",
     slug: "compressors",
-    name: { hy: "Компрессоры", ru: "Компрессоры", en: "Compressors" },
+    name: { hy: "Կոմպրեսորներ", ru: "Компрессоры", en: "Compressors" },
     description: {
-      hy: "Компрессорные масла для всех типов компрессоров",
+      hy: "Կոմպրեսորային յուղեր բոլոր տեսակի կոմպրեսորների համար",
       ru: "Компрессорные масла для всех типов компрессоров",
       en: "Compressor oils for all compressor types",
     },
@@ -63,15 +63,15 @@ export const equipmentList: Equipment[] = [
     icon: "Wind",
     recommendedProducts: ["cogelsa-compressor-oil-pao-68"],
     maintenanceTips: [
-      { hy: "Своевременная замена масла", ru: "Своевременная замена масла", en: "Timely oil change" },
+      { hy: "Յուղի ժամանակին փոխարինում", ru: "Своевременная замена масла", en: "Timely oil change" },
     ],
   },
   {
     id: "hydraulic-systems",
     slug: "hydraulic-systems",
-    name: { hy: "Гидравлические системы", ru: "Гидравлические системы", en: "Hydraulic Systems" },
+    name: { hy: "Հիդրավլիկ համակարգեր", ru: "Гидравлические системы", en: "Hydraulic Systems" },
     description: {
-      hy: "Гидравлические масла для промышленных систем",
+      hy: "Հիդրավլիկ յուղեր արդյունաբերական համակարգերի համար",
       ru: "Гидравлические масла для промышленных систем",
       en: "Hydraulic oils for industrial systems",
     },
@@ -79,15 +79,15 @@ export const equipmentList: Equipment[] = [
     icon: "Droplets",
     recommendedProducts: ["cogelsa-hydraulic-hlp-46"],
     maintenanceTips: [
-      { hy: "Анализ масла каждые 6 месяцев", ru: "Анализ масла каждые 6 месяцев", en: "Oil analysis every 6 months" },
+      { hy: "Յուղի վերլուծություն յուրաքանչյուր 6 ամիսը մեկ", ru: "Анализ масла каждые 6 месяцев", en: "Oil analysis every 6 months" },
     ],
   },
   {
     id: "vacuum-pumps",
     slug: "vacuum-pumps",
-    name: { hy: "Вакуумные насосы", ru: "Вакуумные насосы", en: "Vacuum Pumps" },
+    name: { hy: "Վակուումային պոմպեր", ru: "Вакуумные насосы", en: "Vacuum Pumps" },
     description: {
-      hy: "Вакуумные масла специального назначения",
+      hy: "Հատուկ նշանակության վակուումային յուղեր",
       ru: "Вакуумные масла специального назначения",
       en: "Specialty vacuum pump oils",
     },
@@ -99,9 +99,9 @@ export const equipmentList: Equipment[] = [
   {
     id: "open-gears",
     slug: "open-gears",
-    name: { hy: "Открытые зубчатые передачи", ru: "Открытые зубчатые передачи", en: "Open Gears" },
+    name: { hy: "Բաց ատամնանիվային փոխանցումներ", ru: "Открытые зубчатые передачи", en: "Open Gears" },
     description: {
-      hy: "Смазки для открытых зубчатых передач",
+      hy: "Քսուքներ բաց ատամնանիվային փոխանցումների համար",
       ru: "Смазки для открытых зубчатых передач",
       en: "Lubricants for open gear drives",
     },
@@ -113,9 +113,9 @@ export const equipmentList: Equipment[] = [
   {
     id: "conveyors",
     slug: "conveyors",
-    name: { hy: "Конвейеры", ru: "Конвейеры", en: "Conveyors" },
+    name: { hy: "Կոնվեյերներ", ru: "Конвейеры", en: "Conveyors" },
     description: {
-      hy: "Смазки для конвейерных систем",
+      hy: "Քսուքներ կոնվեյերային համակարգերի համար",
       ru: "Смазки для конвейерных систем",
       en: "Lubricants for conveyor systems",
     },
@@ -127,9 +127,9 @@ export const equipmentList: Equipment[] = [
   {
     id: "electric-motors",
     slug: "electric-motors",
-    name: { hy: "Электродвигатели", ru: "Электродвигатели", en: "Electric Motors" },
+    name: { hy: "Էլեկտրաշարժիչներ", ru: "Электродвигатели", en: "Electric Motors" },
     description: {
-      hy: "Смазки для подшипников электродвигателей",
+      hy: "Քսուքներ էլեկտրաշարժիչների առանցքակալների համար",
       ru: "Смазки для подшипников электродвигателей",
       en: "Greases for electric motor bearings",
     },
@@ -141,9 +141,9 @@ export const equipmentList: Equipment[] = [
   {
     id: "mixers",
     slug: "mixers",
-    name: { hy: "Смесители", ru: "Смесители", en: "Mixers" },
+    name: { hy: "Խառնիչներ", ru: "Смесители", en: "Mixers" },
     description: {
-      hy: "Food Grade смазки для смесительного оборудования",
+      hy: "Food Grade քսուքներ խառնիչ սարքավորումների համար",
       ru: "Food Grade смазки для смесительного оборудования",
       en: "Food Grade greases for mixing equipment",
     },
@@ -155,9 +155,9 @@ export const equipmentList: Equipment[] = [
   {
     id: "food-machines",
     slug: "food-machines",
-    name: { hy: "Пищевое оборудование", ru: "Пищевое оборудование", en: "Food Machines" },
+    name: { hy: "Սննդի սարքավորումներ", ru: "Пищевое оборудование", en: "Food Machines" },
     description: {
-      hy: "NSF H1 смазки для пищевого оборудования",
+      hy: "NSF H1 քսուքներ սննդի սարքավորումների համար",
       ru: "NSF H1 смазки для пищевого оборудования",
       en: "NSF H1 lubricants for food machinery",
     },
@@ -169,9 +169,9 @@ export const equipmentList: Equipment[] = [
   {
     id: "packaging-machines",
     slug: "packaging-machines",
-    name: { hy: "Упаковочные машины", ru: "Упаковочные машины", en: "Packaging Machines" },
+    name: { hy: "Փաթեթավորման մեքենաներ", ru: "Упаковочные машины", en: "Packaging Machines" },
     description: {
-      hy: "Смазки для упаковочного оборудования",
+      hy: "Քսուքներ փաթեթավորման սարքավորումների համար",
       ru: "Смазки для упаковочного оборудования",
       en: "Lubricants for packaging machinery",
     },

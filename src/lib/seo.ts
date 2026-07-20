@@ -40,6 +40,7 @@ export function generateSEO({
     alternates: {
       canonical: url,
       languages: {
+        hy: `${siteUrl}/hy${path}`,
         ru: `${siteUrl}/ru${path}`,
         en: `${siteUrl}/en${path}`,
       },

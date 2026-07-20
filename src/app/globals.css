@@ -21,6 +21,19 @@
     overflow-x: hidden;
   }
 
+  html[lang="hy"] body,
+  html[lang="hy"] .font-display,
+  html[lang="hy"] .heading-display,
+  html[lang="hy"] .heading-section {
+    font-family: var(--font-armenian), var(--font-body), system-ui, sans-serif;
+  }
+
+  html[lang="hy"] .font-display,
+  html[lang="hy"] .heading-display,
+  html[lang="hy"] .heading-section {
+    font-family: var(--font-armenian), var(--font-display), var(--font-body), system-ui, sans-serif;
+  }
+
   ::selection {
     @apply bg-accent/20 text-navy-900;
   }

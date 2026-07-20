@@ -5,12 +5,12 @@ export const productCategories: ProductCategory[] = [
     id: "industrial-oils",
     slug: "industrial-oils",
     name: {
-      hy: "Industrial Oils",
+      hy: "Արդյունաբերական յուղեր",
       ru: "Промышленные масла",
       en: "Industrial Oils",
     },
     description: {
-      hy: "High-quality industrial oils for all equipment types",
+      hy: "Բարձրորակ արդյունաբերական յուղեր բոլոր տեսակի սարքավորումների համար",
       ru: "Высококачественные промышленные масла для всех типов оборудования",
       en: "High-quality industrial oils for all equipment types",
     },
@@ -20,7 +20,7 @@ export const productCategories: ProductCategory[] = [
         id: "hydraulic",
         slug: "hydraulic-oils",
         name: {
-          hy: "Hydraulic Oils",
+          hy: "Հիդրավլիկ յուղեր",
           ru: "Гидравлические масла",
           en: "Hydraulic Oils",
         },
@@ -28,13 +28,13 @@ export const productCategories: ProductCategory[] = [
       {
         id: "gear",
         slug: "gear-oils",
-        name: { hy: "Gear Oils", ru: "Редукторные масла", en: "Gear Oils" },
+        name: { hy: "Ռեդուկտորային յուղեր", ru: "Редукторные масла", en: "Gear Oils" },
       },
       {
         id: "compressor",
         slug: "compressor-oils",
         name: {
-          hy: "Compressor Oils",
+          hy: "Կոմպրեսորային յուղեր",
           ru: "Компрессорные масла",
           en: "Compressor Oils",
         },
@@ -42,13 +42,13 @@ export const productCategories: ProductCategory[] = [
       {
         id: "vacuum",
         slug: "vacuum-oils",
-        name: { hy: "Vacuum Oils", ru: "Вакуумные масла", en: "Vacuum Oils" },
+        name: { hy: "Վակուումային յուղեր", ru: "Вакуумные масла", en: "Vacuum Oils" },
       },
       {
         id: "food-grade",
         slug: "food-grade-oils",
         name: {
-          hy: "Food Grade Oils",
+          hy: "Սննդային յուղեր (Food Grade)",
           ru: "Food Grade масла",
           en: "Food Grade Oils",
         },
@@ -57,7 +57,7 @@ export const productCategories: ProductCategory[] = [
         id: "heat-transfer",
         slug: "heat-transfer-fluids",
         name: {
-          hy: "Heat Transfer Fluids",
+          hy: "Ջերմատար հեղուկներ",
           ru: "Теплоносители",
           en: "Heat Transfer Fluids",
         },
@@ -65,13 +65,13 @@ export const productCategories: ProductCategory[] = [
       {
         id: "chain",
         slug: "chain-oils",
-        name: { hy: "Chain Oils", ru: "Цепные масла", en: "Chain Oils" },
+        name: { hy: "Շղթայական յուղեր", ru: "Цепные масла", en: "Chain Oils" },
       },
       {
         id: "biodegradable",
         slug: "biodegradable-oils",
         name: {
-          hy: "Biodegradable Oils",
+          hy: "Կենսաքայքայվող յուղեր",
           ru: "Биоразлагаемые масла",
           en: "Biodegradable Oils",
         },
@@ -80,7 +80,7 @@ export const productCategories: ProductCategory[] = [
         id: "universal",
         slug: "universal-oils",
         name: {
-          hy: "Universal Oils",
+          hy: "Ունիվերսալ յուղեր",
           ru: "Универсальные масла",
           en: "Universal Oils",
         },
@@ -89,7 +89,7 @@ export const productCategories: ProductCategory[] = [
         id: "spindle",
         slug: "spindle-oils",
         name: {
-          hy: "Spindle Oils",
+          hy: "Իլային յուղեր",
           ru: "Шпиндельные масла",
           en: "Spindle Oils",
         },
@@ -98,7 +98,7 @@ export const productCategories: ProductCategory[] = [
         id: "slideway",
         slug: "slideway-oils",
         name: {
-          hy: "Slideway Oils",
+          hy: "Ուղեցույցների յուղեր",
           ru: "Масла для направляющих",
           en: "Slideway Oils",
         },
@@ -107,7 +107,7 @@ export const productCategories: ProductCategory[] = [
         id: "turbine",
         slug: "turbine-oils",
         name: {
-          hy: "Turbine Oils",
+          hy: "Տուրբինային յուղեր",
           ru: "Турбинные масла",
           en: "Turbine Oils",
         },
@@ -116,7 +116,7 @@ export const productCategories: ProductCategory[] = [
         id: "pneumatic",
         slug: "pneumatic-oils",
         name: {
-          hy: "Pneumatic Oils",
+          hy: "Պնևմատիկ համակարգերի յուղեր",
           ru: "Масла для пневмосистем",
           en: "Pneumatic Oils",
         },
@@ -125,7 +125,7 @@ export const productCategories: ProductCategory[] = [
         id: "special",
         slug: "special-oils",
         name: {
-          hy: "Special Oils",
+          hy: "Հատուկ նշանակության յուղեր",
           ru: "Специальные масла",
           en: "Special Oils",
         },
@@ -136,12 +136,12 @@ export const productCategories: ProductCategory[] = [
     id: "industrial-greases",
     slug: "industrial-greases",
     name: {
-      hy: "Industrial Greases",
+      hy: "Արդյունաբերական քսուքներ",
       ru: "Промышленные смазки",
       en: "Industrial Greases",
     },
     description: {
-      hy: "Professional greases for bearings, gearboxes and heavy equipment",
+      hy: "Պրոֆեսիոնալ քսուքներ առանցքակալների, ռեդուկտորների և ծանր սարքավորումների համար",
       ru: "Профессиональные смазки для подшипников, редукторов и тяжёлого оборудования",
       en: "Professional greases for bearings, gearboxes and heavy equipment",
     },
@@ -151,7 +151,7 @@ export const productCategories: ProductCategory[] = [
         id: "lithium",
         slug: "lithium-greases",
         name: {
-          hy: "Lithium Greases",
+          hy: "Լիթիումային քսուքներ",
           ru: "Литиевые смазки",
           en: "Lithium Greases",
         },
@@ -160,7 +160,7 @@ export const productCategories: ProductCategory[] = [
         id: "lithium-complex",
         slug: "lithium-complex-greases",
         name: {
-          hy: "Lithium Complex Greases",
+          hy: "Լիթիումային կոմպլեքսային քսուքներ",
           ru: "Литиевые комплексные",
           en: "Lithium Complex Greases",
         },
@@ -169,7 +169,7 @@ export const productCategories: ProductCategory[] = [
         id: "calcium",
         slug: "calcium-greases",
         name: {
-          hy: "Calcium Greases",
+          hy: "Կալցիումային քսուքներ",
           ru: "Кальциевые смазки",
           en: "Calcium Greases",
         },
@@ -178,7 +178,7 @@ export const productCategories: ProductCategory[] = [
         id: "calcium-sulfonate",
         slug: "calcium-sulfonate-greases",
         name: {
-          hy: "Calcium Sulfonate Greases",
+          hy: "Կալցիում-սուլֆոնատային քսուքներ",
           ru: "Сульфонат-кальциевые",
           en: "Calcium Sulfonate Greases",
         },
@@ -187,7 +187,7 @@ export const productCategories: ProductCategory[] = [
         id: "aluminium",
         slug: "aluminium-complex-greases",
         name: {
-          hy: "Aluminium Complex Greases",
+          hy: "Ալյումինային կոմպլեքսային քսուքներ",
           ru: "Алюминиевые комплексные",
           en: "Aluminium Complex Greases",
         },
@@ -196,7 +196,7 @@ export const productCategories: ProductCategory[] = [
         id: "barium",
         slug: "barium-complex-greases",
         name: {
-          hy: "Barium Complex Greases",
+          hy: "Բարիումային կոմպլեքսային քսուքներ",
           ru: "Бариевые комплексные",
           en: "Barium Complex Greases",
         },
@@ -205,7 +205,7 @@ export const productCategories: ProductCategory[] = [
         id: "silicone",
         slug: "silicone-greases",
         name: {
-          hy: "Silicone Greases",
+          hy: "Սիլիկոնային քսուքներ",
           ru: "Силиконовые смазки",
           en: "Silicone Greases",
         },
@@ -213,13 +213,13 @@ export const productCategories: ProductCategory[] = [
       {
         id: "ptfe",
         slug: "ptfe-greases",
-        name: { hy: "PTFE Greases", ru: "PTFE смазки", en: "PTFE Greases" },
+        name: { hy: "PTFE քսուքներ", ru: "PTFE смазки", en: "PTFE Greases" },
       },
       {
         id: "inorganic",
         slug: "inorganic-greases",
         name: {
-          hy: "Inorganic Greases",
+          hy: "Անօրգանական քսուքներ",
           ru: "Неорганические смазки",
           en: "Inorganic Greases",
         },
@@ -227,13 +227,13 @@ export const productCategories: ProductCategory[] = [
       {
         id: "copper",
         slug: "copper-pastes",
-        name: { hy: "Copper Pastes", ru: "Медные пасты", en: "Copper Pastes" },
+        name: { hy: "Պղնձի մածուկներ", ru: "Медные пасты", en: "Copper Pastes" },
       },
       {
         id: "pastes-waxes",
         slug: "pastes-waxes",
         name: {
-          hy: "Pastes & Waxes",
+          hy: "Մածուկներ և մոմեր",
           ru: "Пасты и воски",
           en: "Pastes & Waxes",
         },
@@ -244,12 +244,12 @@ export const productCategories: ProductCategory[] = [
     id: "industrial-sprays",
     slug: "industrial-sprays",
     name: {
-      hy: "Industrial Sprays",
+      hy: "Արդյունաբերական սփրեյներ",
       ru: "Промышленные спреи",
       en: "Industrial Sprays",
     },
     description: {
-      hy: "Specialized aerosol lubricants and protective compounds",
+      hy: "Մասնագիտացված աերոզոլային քսանյութեր և պաշտպանիչ միջոցներ",
       ru: "Специализированные аэрозольные смазки и защитные составы",
       en: "Specialized aerosol lubricants and protective compounds",
     },
@@ -259,7 +259,7 @@ export const productCategories: ProductCategory[] = [
         id: "lubricant-sprays",
         slug: "lubricant-sprays",
         name: {
-          hy: "Lubricant Sprays",
+          hy: "Քսող սփրեյներ",
           ru: "Смазочные спреи",
           en: "Lubricant Sprays",
         },
@@ -268,7 +268,7 @@ export const productCategories: ProductCategory[] = [
         id: "food-sprays",
         slug: "food-grade-sprays",
         name: {
-          hy: "Food Grade Sprays",
+          hy: "Սննդային սփրեյներ (Food Grade)",
           ru: "Пищевые спреи",
           en: "Food Grade Sprays",
         },
@@ -277,7 +277,7 @@ export const productCategories: ProductCategory[] = [
         id: "specialty-sprays",
         slug: "specialty-sprays",
         name: {
-          hy: "Specialty Sprays",
+          hy: "Հատուկ նշանակության սփրեյներ",
           ru: "Специальные спреи",
           en: "Specialty Sprays",
         },
@@ -288,12 +288,12 @@ export const productCategories: ProductCategory[] = [
     id: "industrial-cleaners",
     slug: "industrial-cleaners",
     name: {
-      hy: "Industrial Cleaners",
+      hy: "Արդյունաբերական մաքրող միջոցներ",
       ru: "Промышленные очистители",
       en: "Industrial Cleaners",
     },
     description: {
-      hy: "Professional cleaners for industrial equipment",
+      hy: "Պրոֆեսիոնալ մաքրող միջոցներ արդյունաբերական սարքավորումների համար",
       ru: "Профессиональные очистители для промышленного оборудования",
       en: "Professional cleaners for industrial equipment",
     },
@@ -303,7 +303,7 @@ export const productCategories: ProductCategory[] = [
         id: "water-soluble",
         slug: "water-soluble-cleaners",
         name: {
-          hy: "Water-soluble Cleaners",
+          hy: "Ջրալույծ մաքրող միջոցներ",
           ru: "Водорастворимые очистители",
           en: "Water-soluble Cleaners",
         },
@@ -312,7 +312,7 @@ export const productCategories: ProductCategory[] = [
         id: "solvent",
         slug: "solvent-cleaners",
         name: {
-          hy: "Solvent Cleaners",
+          hy: "Լուծիչահիմք մաքրող միջոցներ",
           ru: "Очистители на растворителях",
           en: "Solvent Cleaners",
         },
@@ -321,7 +321,7 @@ export const productCategories: ProductCategory[] = [
         id: "plant-based",
         slug: "plant-based-cleaners",
         name: {
-          hy: "Plant-based Cleaners",
+          hy: "Բուսական հիմքով մաքրող միջոցներ",
           ru: "Растительные очистители",
           en: "Plant-based Cleaners",
         },
@@ -330,7 +330,7 @@ export const productCategories: ProductCategory[] = [
         id: "circuit",
         slug: "circuit-cleaners",
         name: {
-          hy: "Circuit / System Cleaners",
+          hy: "Կոնտուրների և համակարգերի մաքրում",
           ru: "Очистка контуров и систем",
           en: "Circuit / System Cleaners",
         },
@@ -341,12 +341,12 @@ export const productCategories: ProductCategory[] = [
     id: "textile-lubricants",
     slug: "textile-lubricants",
     name: {
-      hy: "Textile Lubricants",
+      hy: "Տեքստիլային քսանյութեր",
       ru: "Текстильные смазки",
       en: "Textile Lubricants",
     },
     description: {
-      hy: "Specialized lubricants and auxiliaries for textile production",
+      hy: "Մասնագիտացված քսանյութեր և օժանդակ միջոցներ տեքստիլ արտադրության համար",
       ru: "Специализированные смазки и вспомогательные средства для текстильного производства",
       en: "Specialized lubricants and auxiliaries for textile production",
     },
@@ -356,7 +356,7 @@ export const productCategories: ProductCategory[] = [
         id: "knitting",
         slug: "knitting-oils",
         name: {
-          hy: "Knitting Oils",
+          hy: "Հյուսագործական յուղեր",
           ru: "Масла для вязального оборудования",
           en: "Knitting Oils",
         },
@@ -365,7 +365,7 @@ export const productCategories: ProductCategory[] = [
         id: "spinning",
         slug: "spinning-oils",
         name: {
-          hy: "Spinning Oils",
+          hy: "Մանման յուղեր",
           ru: "Масла для прядения",
           en: "Spinning Oils",
         },
@@ -374,7 +374,7 @@ export const productCategories: ProductCategory[] = [
         id: "spinning-aux",
         slug: "spinning-auxiliaries",
         name: {
-          hy: "Spinning Auxiliaries",
+          hy: "Մանման օժանդակ միջոցներ",
           ru: "Вспомогательные средства для прядения",
           en: "Spinning Auxiliaries",
         },
@@ -383,7 +383,7 @@ export const productCategories: ProductCategory[] = [
         id: "textile-other",
         slug: "textile-specialty",
         name: {
-          hy: "Specialty Textile Lubricants",
+          hy: "Հատուկ տեքստիլային քսանյութեր",
           ru: "Специальные текстильные материалы",
           en: "Specialty Textile Lubricants",
         },
@@ -394,12 +394,12 @@ export const productCategories: ProductCategory[] = [
     id: "metalworking-fluids",
     slug: "metalworking-fluids",
     name: {
-      hy: "Metalworking Fluids",
+      hy: "Մետաղամշակման հեղուկներ",
       ru: "Масла для металлообработки",
       en: "Metalworking Fluids",
     },
     description: {
-      hy: "Forming, drawing, stamping, casting and cutting fluids",
+      hy: "Ձևավորման, ձգման, դրոշմման, ձուլման և կտրման հեղուկներ",
       ru: "Масла и составы для штамповки, вытяжки, волочения, литья и резки",
       en: "Forming, drawing, stamping, casting and cutting fluids",
     },
@@ -409,7 +409,7 @@ export const productCategories: ProductCategory[] = [
         id: "forming-neat",
         slug: "forming-neat-oils",
         name: {
-          hy: "Neat Forming Oils",
+          hy: "Մաքուր յուղեր դրոշմման և ձգման համար",
           ru: "Чистые масла для штамповки и вытяжки",
           en: "Neat Forming Oils",
         },
@@ -418,7 +418,7 @@ export const productCategories: ProductCategory[] = [
         id: "forming-soluble",
         slug: "forming-soluble-oils",
         name: {
-          hy: "Soluble Forming Oils",
+          hy: "Լուծվող յուղեր ձևավորման համար",
           ru: "Растворимые масла для формовки",
           en: "Soluble Forming Oils",
         },
@@ -427,7 +427,7 @@ export const productCategories: ProductCategory[] = [
         id: "vanishing",
         slug: "vanishing-oils",
         name: {
-          hy: "Vanishing Oils",
+          hy: "Գոլորշիացող յուղեր",
           ru: "Испаряющиеся масла",
           en: "Vanishing Oils",
         },
@@ -436,7 +436,7 @@ export const productCategories: ProductCategory[] = [
         id: "wire-drawing",
         slug: "wire-drawing-oils",
         name: {
-          hy: "Wire Drawing Oils",
+          hy: "Մետաղալարի ձգման յուղեր",
           ru: "Масла для волочения проволоки",
           en: "Wire Drawing Oils",
         },
@@ -445,7 +445,7 @@ export const productCategories: ProductCategory[] = [
         id: "die-casting",
         slug: "die-casting-fluids",
         name: {
-          hy: "Die Casting Fluids",
+          hy: "Ձուլման հեղուկներ ճնշման տակ",
           ru: "Составы для литья под давлением",
           en: "Die Casting Fluids",
         },
@@ -454,7 +454,7 @@ export const productCategories: ProductCategory[] = [
         id: "forging",
         slug: "forging-fluids",
         name: {
-          hy: "Forging & Foundry Fluids",
+          hy: "Դարբնոցային և ձուլարանային հեղուկներ",
           ru: "Жидкости для ковки и литейного производства",
           en: "Forging & Foundry Fluids",
         },
@@ -463,7 +463,7 @@ export const productCategories: ProductCategory[] = [
         id: "aluminum-cutting",
         slug: "aluminum-cutting",
         name: {
-          hy: "Aluminum Cutting Fluids",
+          hy: "Ալյումինի կտրման հեղուկներ",
           ru: "Жидкости для резки алюминия",
           en: "Aluminum Cutting Fluids",
         },
@@ -472,7 +472,7 @@ export const productCategories: ProductCategory[] = [
         id: "cold-drawing",
         slug: "cold-drawing-oils",
         name: {
-          hy: "Cold Drawing / Calibration Oils",
+          hy: "Սառը կալիբրման յուղեր",
           ru: "Масла для холодной калибровки",
           en: "Cold Drawing / Calibration Oils",
         },

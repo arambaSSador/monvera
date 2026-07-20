@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Unbounded, Manrope } from "next/font/google";
+import { Unbounded, Manrope, Noto_Sans_Armenian } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { Header } from "@/components/layout/Header";
@@ -24,6 +24,13 @@ const body = Manrope({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const armenian = Noto_Sans_Armenian({
+  subsets: ["armenian"],
+  variable: "--font-armenian",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -37,7 +44,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as "ru" | "en")) {
+  if (!routing.locales.includes(locale as "hy" | "ru" | "en")) {
     notFound();
   }
 
@@ -45,7 +52,7 @@ export default async function LocaleLayout({
   const orgSchema = generateOrganizationSchema();
 
   return (
-    <html lang={locale} className={`${display.variable} ${body.variable}`}>
+    <html lang={locale} className={`${display.variable} ${body.variable} ${armenian.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <script

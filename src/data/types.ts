@@ -119,5 +119,8 @@ export function getLocalized(
   obj: LocalizedString,
   locale: string
 ): string {
-  return obj[locale as keyof LocalizedString] || obj.en;
+  const value = obj[locale as keyof LocalizedString];
+  if (value) return value;
+  if (locale === "hy") return obj.ru || obj.en;
+  return obj.en || obj.ru;
 }
