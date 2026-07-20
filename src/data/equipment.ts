@@ -27,7 +27,7 @@ export const equipmentList: Equipment[] = [
       ru: "Редукторные масла для промышленных передач",
       en: "Gear oils for industrial transmissions",
     },
-    image: "/images/equipment/podshipnik.jpg",
+    image: "/images/equipment/reduktor.jpg",
     icon: "Cog",
     recommendedProducts: ["cogelsa-gear-oil-ep-220"],
     maintenanceTips: [
@@ -75,7 +75,7 @@ export const equipmentList: Equipment[] = [
       ru: "Гидравлические масла для промышленных систем",
       en: "Hydraulic oils for industrial systems",
     },
-    image: "/images/equipment/hydraulics.jpg",
+    image: "/images/equipment/hydraulic.jpeg",
     icon: "Droplets",
     recommendedProducts: ["cogelsa-hydraulic-hlp-46"],
     maintenanceTips: [
@@ -91,7 +91,7 @@ export const equipmentList: Equipment[] = [
       ru: "Вакуумные масла специального назначения",
       en: "Specialty vacuum pump oils",
     },
-    image: "/images/equipment/vacuum.jpg",
+    image: "/images/equipment/nasos.jpg",
     icon: "Gauge",
     recommendedProducts: [],
     maintenanceTips: [],
