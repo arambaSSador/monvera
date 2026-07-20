@@ -50,6 +50,7 @@ export default async function BlogPostPage({
 
   const tNav = await getTranslations({ locale, namespace: "nav" });
   const tCta = await getTranslations({ locale, namespace: "cta" });
+  const tCat = await getTranslations({ locale, namespace: "blogCategories" });
   const content = getLocalized(post.content, locale);
   const paragraphs = content.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
 
@@ -60,7 +61,9 @@ export default async function BlogPostPage({
         <section className="pt-32 pb-8">
           <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <Breadcrumbs items={[{ label: tNav("blog"), href: "/blog" }, { label: getLocalized(post.title, locale) }]} />
-            <span className="badge-accent mt-6 inline-block">{post.category}</span>
+            <span className="badge-accent mt-6 inline-block">
+              {tCat(post.category as "guides" | "maintenance" | "food" | "case-studies")}
+            </span>
             <h1 className="heading-section text-navy-900 mt-4">{getLocalized(post.title, locale)}</h1>
             <div className="flex items-center gap-4 mt-4 text-navy-500 text-sm">
               <span>{post.author}</span>

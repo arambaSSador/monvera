@@ -208,6 +208,12 @@
     "readMore": "Read More",
     "share": "Share"
   },
+  "blogCategories": {
+    "guides": "Guides",
+    "maintenance": "Maintenance",
+    "food": "Food Industry",
+    "case-studies": "Case Studies"
+  },
   "downloadsPage": {
     "pdfCatalogues": "PDF Catalogues",
     "technicalGuides": "Technical Guides",

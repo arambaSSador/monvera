@@ -9,8 +9,12 @@ import { generateSEO } from "@/lib/seo";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   return generateSEO({
-    title: { en: "Technical Blog", ru: "Технический блог", hy: "Tekhnakan blog" },
-    description: { en: "Industrial lubrication tips and guides", ru: "Советы по промышленной смазке", hy: "Smazki masin" },
+    title: { en: "Technical Blog", ru: "Технический блог", hy: "Տեխնիկական բլոգ" },
+    description: {
+      en: "Industrial lubrication tips and guides",
+      ru: "Советы по промышленной смазке",
+      hy: "Խորհուրդներ արդյունաբերական քսման մասին",
+    },
     locale,
     path: "/blog",
   });
@@ -20,6 +24,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "sections" });
   const tCommon = await getTranslations({ locale, namespace: "common" });
+  const tCat = await getTranslations({ locale, namespace: "blogCategories" });
 
   return (
     <>
@@ -38,7 +43,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
                 <Image src={post.image} alt="" fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="33vw" />
               </div>
               <div className="p-6">
-                <span className="badge-accent">{post.category}</span>
+                <span className="badge-accent">{tCat(post.category as "guides" | "maintenance" | "food" | "case-studies")}</span>
                 <h2 className="font-display font-bold text-lg mt-3 group-hover:text-accent transition-colors">{getLocalized(post.title, locale)}</h2>
                 <p className="text-navy-500 text-sm mt-2 line-clamp-2">{getLocalized(post.excerpt, locale)}</p>
                 <span className="text-accent text-sm font-semibold mt-4 inline-block">{tCommon("readMore")} →</span>

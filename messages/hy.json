@@ -208,6 +208,12 @@
     "readMore": "Կարդալ ավելին",
     "share": "Կիսվել"
   },
+  "blogCategories": {
+    "guides": "Ուղեցույցներ",
+    "maintenance": "Սպասարկում",
+    "food": "Սննդի ոլորտ",
+    "case-studies": "Դեպքեր"
+  },
   "downloadsPage": {
     "pdfCatalogues": "PDF կատալոգներ",
     "technicalGuides": "Տեխնիկական ուղեցույցներ",

@@ -208,6 +208,12 @@
     "readMore": "Читать далее",
     "share": "Поделиться"
   },
+  "blogCategories": {
+    "guides": "Руководства",
+    "maintenance": "Обслуживание",
+    "food": "Пищевая отрасль",
+    "case-studies": "Кейсы"
+  },
   "downloadsPage": {
     "pdfCatalogues": "PDF-каталоги",
     "technicalGuides": "Технические руководства",
