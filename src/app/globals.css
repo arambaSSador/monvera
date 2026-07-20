@@ -25,13 +25,18 @@
   html[lang="hy"] .font-display,
   html[lang="hy"] .heading-display,
   html[lang="hy"] .heading-section {
-    font-family: var(--font-armenian), var(--font-body), system-ui, sans-serif;
+    /* Keep Latin word metrics identical to ru/en.
+       Armenian font is used only as a fallback for Armenian glyphs. */
+    font-family: var(--font-display), var(--font-armenian), var(--font-body), system-ui,
+      sans-serif;
   }
 
   html[lang="hy"] .font-display,
   html[lang="hy"] .heading-display,
   html[lang="hy"] .heading-section {
-    font-family: var(--font-armenian), var(--font-display), var(--font-body), system-ui, sans-serif;
+    /* Same ordering: Latin first, Armenian only as fallback. */
+    font-family: var(--font-display), var(--font-armenian), var(--font-body), system-ui,
+      sans-serif;
   }
 
   ::selection {
