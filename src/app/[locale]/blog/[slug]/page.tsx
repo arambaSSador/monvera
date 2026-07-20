@@ -48,13 +48,18 @@ export default async function BlogPostPage({
     author: post.author,
   });
 
+  const tNav = await getTranslations({ locale, namespace: "nav" });
+  const tCta = await getTranslations({ locale, namespace: "cta" });
+  const content = getLocalized(post.content, locale);
+  const paragraphs = content.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <article>
         <section className="pt-32 pb-8">
           <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: getLocalized(post.title, locale) }]} />
+            <Breadcrumbs items={[{ label: tNav("blog"), href: "/blog" }, { label: getLocalized(post.title, locale) }]} />
             <span className="badge-accent mt-6 inline-block">{post.category}</span>
             <h1 className="heading-section text-navy-900 mt-4">{getLocalized(post.title, locale)}</h1>
             <div className="flex items-center gap-4 mt-4 text-navy-500 text-sm">
@@ -62,22 +67,26 @@ export default async function BlogPostPage({
               <span>•</span>
               <time>{post.date}</time>
               <span>•</span>
-              <span>{post.readTime} min read</span>
+              <span>{post.readTime} min</span>
             </div>
           </div>
         </section>
         <div className="container-wide mx-auto px-4 max-w-4xl mb-12">
           <div className="relative aspect-[21/9] rounded-3xl overflow-hidden shadow-premium">
-            <Image src={post.image} alt="" fill className="object-cover" priority />
+            <Image src={post.image} alt={getLocalized(post.title, locale)} fill className="object-cover" priority />
           </div>
         </div>
         <div className="container-wide mx-auto px-4 max-w-3xl pb-20">
           <div className="prose-monvera">
             <p className="text-xl text-navy-600 leading-relaxed mb-8">{getLocalized(post.excerpt, locale)}</p>
-            <p>{getLocalized(post.content, locale)}</p>
+            {paragraphs.map((paragraph, i) => (
+              <p key={i} className="mb-5 text-base leading-relaxed text-navy-700 whitespace-pre-line">
+                {paragraph}
+              </p>
+            ))}
           </div>
           <div className="mt-12 pt-8 border-t border-navy-100">
-            <Link href="/contact" className="btn-primary">Contact Expert →</Link>
+            <Link href="/contact" className="btn-primary">{tCta("contactExpert")} →</Link>
           </div>
         </div>
       </article>
