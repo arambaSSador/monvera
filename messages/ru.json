@@ -8,6 +8,7 @@
     "home": "Главная",
     "products": "Продукция",
     "industries": "Отрасли",
+    "equipment": "Оборудование",
     "services": "Услуги",
     "technicalSupport": "Техподдержка",
     "about": "О нас",
@@ -43,6 +44,7 @@
   "sections": {
     "industries": "Отрасли",
     "industriesSubtitle": "Смазочные решения COGELSA для всех промышленных отраслей",
+    "equipment": "Промышленное оборудование",
     "products": "Продукция",
     "productsSubtitle": "500+ промышленных смазочных материалов европейского качества",
     "services": "Услуги",

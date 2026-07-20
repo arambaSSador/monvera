@@ -8,6 +8,7 @@
     "home": "Home",
     "products": "Products",
     "industries": "Industries",
+    "equipment": "Equipment",
     "services": "Services",
     "technicalSupport": "Technical Support",
     "about": "About Us",
@@ -43,6 +44,7 @@
   "sections": {
     "industries": "Industries",
     "industriesSubtitle": "COGELSA lubrication solutions for all industrial sectors",
+    "equipment": "Industrial Equipment",
     "products": "Products",
     "productsSubtitle": "500+ industrial lubricants of European quality",
     "services": "Services",

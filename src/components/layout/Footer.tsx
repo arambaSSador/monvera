@@ -24,7 +24,7 @@ export function Footer() {
       title: t("nav.industries"),
       links: [
         { href: "/industries", label: t("nav.industries") },
-        { href: "/equipment", label: "Equipment" },
+        { href: "/equipment", label: t("nav.equipment") },
         { href: "/services", label: t("nav.services") },
         { href: "/technical-support", label: t("nav.technicalSupport") },
       ],

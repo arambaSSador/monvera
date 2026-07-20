@@ -26,8 +26,8 @@ export async function generateMetadata({
   return generateSEO({
     title: {
       en: `Lubricants for ${getLocalized(equipment.name, "en")}`,
-      ru: `Смaзки для ${getLocalized(equipment.name, "ru")}`,
-      hy: getLocalized(equipment.name, "hy"),
+      ru: `Смазки для ${getLocalized(equipment.name, "ru")}`,
+      hy: `Քսանյութեր՝ ${getLocalized(equipment.name, "hy")}`,
     },
     description: equipment.description,
     locale,
@@ -45,13 +45,14 @@ export default async function EquipmentPage({
   if (!equipment) notFound();
 
   const tCta = await getTranslations({ locale, namespace: "cta" });
+  const tNav = await getTranslations({ locale, namespace: "nav" });
   const recommended = getProductsByEquipment(slug);
 
   return (
     <>
       <section className="pt-32 pb-12 bg-navy-900 text-white">
         <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: "Equipment", href: "/equipment" }, { label: getLocalized(equipment.name, locale) }]} />
+          <Breadcrumbs items={[{ label: tNav("equipment"), href: "/equipment" }, { label: getLocalized(equipment.name, locale) }]} />
           <h1 className="heading-section text-white mt-4">{getLocalized(equipment.name, locale)}</h1>
           <p className="text-white/85 text-lg mt-4 max-w-2xl">{getLocalized(equipment.description, locale)}</p>
         </div>
