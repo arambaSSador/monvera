@@ -53,6 +53,7 @@
     "blog": "Technical Library",
     "blogSubtitle": "Expert articles on industrial lubrication and maintenance",
     "caseStudies": "Success Stories",
+    "caseStudy": "Case Study",
     "cta": "Ready to improve your lubrication?",
     "ctaSubtitle": "Our engineers will help you select the optimal solution for your equipment"
   },
@@ -216,5 +217,19 @@
     "needOtherBody": "Email {email} or WhatsApp — we will send TDS, MSDS or catalogues.",
     "waMessage": "Hello! I need a COGELSA catalogue / document.",
     "docMessage": "Hello! Please send me this document: {name}."
+  },
+  "technicalSupport": {
+    "intro": "Our lubrication engineers are ready to help with product selection, troubleshooting, and optimization.",
+    "phoneTitle": "Phone Support",
+    "phoneDesc": "Speak directly with our lubrication engineers",
+    "emailTitle": "Email Support",
+    "emailDesc": "Send technical questions to our engineering team",
+    "whatsappTitle": "WhatsApp",
+    "whatsappDesc": "Quick responses via WhatsApp",
+    "whatsappAction": "Chat now",
+    "waMessage": "Technical support request",
+    "onsiteTitle": "On-Site Visit",
+    "onsiteDesc": "Schedule an engineer visit to your facility",
+    "onsiteAction": "Request visit"
   }
 }

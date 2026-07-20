@@ -22,12 +22,38 @@ export default async function TechnicalSupportPage({ params }: { params: Promise
   const { locale } = await params;
   const tNav = await getTranslations({ locale, namespace: "nav" });
   const tCta = await getTranslations({ locale, namespace: "cta" });
+  const tSupport = await getTranslations({ locale, namespace: "technicalSupport" });
+  const tSections = await getTranslations({ locale, namespace: "sections" });
 
   const supportOptions = [
-    { icon: Phone, title: "Phone Support", desc: "Speak directly with our lubrication engineers", action: companyInfo.phone, href: `tel:${companyInfo.phone}` },
-    { icon: Mail, title: "Email Support", desc: "Send technical questions to our engineering team", action: companyInfo.emailTechnical, href: `mailto:${companyInfo.emailTechnical}` },
-    { icon: MessageCircle, title: "WhatsApp", desc: "Quick responses via WhatsApp", action: "Chat now", href: generateWhatsAppLink("Technical support request") },
-    { icon: Wrench, title: "On-Site Visit", desc: "Schedule an engineer visit to your facility", action: "Request visit", href: "/contact" },
+    {
+      icon: Phone,
+      title: tSupport("phoneTitle"),
+      desc: tSupport("phoneDesc"),
+      action: companyInfo.phone,
+      href: `tel:${companyInfo.phone}`,
+    },
+    {
+      icon: Mail,
+      title: tSupport("emailTitle"),
+      desc: tSupport("emailDesc"),
+      action: companyInfo.emailTechnical,
+      href: `mailto:${companyInfo.emailTechnical}`,
+    },
+    {
+      icon: MessageCircle,
+      title: tSupport("whatsappTitle"),
+      desc: tSupport("whatsappDesc"),
+      action: tSupport("whatsappAction"),
+      href: generateWhatsAppLink(tSupport("waMessage")),
+    },
+    {
+      icon: Wrench,
+      title: tSupport("onsiteTitle"),
+      desc: tSupport("onsiteDesc"),
+      action: tSupport("onsiteAction"),
+      href: "/contact",
+    },
   ];
 
   return (
@@ -37,7 +63,7 @@ export default async function TechnicalSupportPage({ params }: { params: Promise
           <Breadcrumbs items={[{ label: tNav("technicalSupport") }]} />
           <h1 className="heading-section text-white mt-4">{tNav("technicalSupport")}</h1>
           <p className="text-white/85 text-lg mt-4 max-w-2xl">
-            Our lubrication engineers are ready to help with product selection, troubleshooting, and optimization.
+            {tSupport("intro")}
           </p>
         </div>
       </section>
@@ -54,7 +80,7 @@ export default async function TechnicalSupportPage({ params }: { params: Promise
         </div>
         <div className="text-center mt-12 flex flex-wrap justify-center gap-4">
           <Button href="/lubricant-finder">{tCta("findLubricant")}</Button>
-          <Link href="/technical-library" className="btn-secondary">Technical Library</Link>
+          <Link href="/technical-library" className="btn-secondary">{tSections("blog")}</Link>
         </div>
       </section>
       <CTASection />
