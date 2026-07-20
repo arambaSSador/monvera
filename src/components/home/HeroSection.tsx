@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { ArrowRight, Download } from "lucide-react";
 import { heroImages } from "@/data/company";
@@ -11,6 +12,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 export function HeroSection() {
   const t = useTranslations("hero");
   const ts = useTranslations("stats");
+  const locale = useLocale();
   const [slide, setSlide] = useState(0);
 
   useEffect(() => {
@@ -59,7 +61,9 @@ export function HeroSection() {
           </p>
 
           <h1
-            className="mt-8 max-w-[18ch] font-display text-2xl font-medium leading-snug tracking-tight text-white/90 opacity-0 animate-fade-up sm:text-3xl lg:text-4xl"
+            className={`mt-8 ${
+              locale === "hy" ? "max-w-[28ch]" : "max-w-[18ch]"
+            } font-display text-2xl font-medium leading-snug tracking-tight text-white/90 opacity-0 animate-fade-up sm:text-3xl lg:text-4xl`}
             style={{ animationDelay: "220ms", animationFillMode: "forwards" }}
           >
             {t("headline")}
